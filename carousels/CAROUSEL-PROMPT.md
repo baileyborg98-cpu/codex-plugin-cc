@@ -52,3 +52,80 @@ SCRIPT
 
 PHOTOS (optional)
 [ATTACH PHOTOS — say which is the hero, otherwise Claude picks]
+
+---
+
+# Standalone variant — no skills connected
+
+Use this version in sessions without the skill library. Everything the skills
+provide (voice, framework, hooks) is written in.
+
+---
+
+Turn the script below into an animated Instagram carousel. Follow every rule here exactly.
+
+VOICE (write like me, Bailey)
+- Raw, direct, motivational. Punchy short sentences mixed with the odd longer one.
+- Sentence case with full stops. No emoji, no hashtags in slides, no corporate words.
+- Swears naturally where it adds punch ("worth a damn", "not the same fucking thing").
+- Dry asides land as their own beats ("Cool." / "That's it. That's the hack.").
+- Talk TO the reader: "you", "your". Endings hit hard — the last line is the mic drop.
+- Never sound like AI: no "unlock", "elevate", "game-changer", no rule-of-three fluff.
+
+CAROUSEL STRUCTURE (scroll-stopping swipe framework)
+- Slide 1 = naked hook: one bold claim, no context, big type. It must make someone
+  stop mid-scroll ("Stop dieting harder." / "Everything you've been told about
+  cheap flights is wrong.").
+- One idea per slide. Never two.
+- Curiosity chain: every slide ends with a short tan tease line pulling into the
+  next slide ("the next one's even more wrong →", "here's what actually works →").
+- Myth/fix content uses kill-and-keep: the old belief struck through and dim, the
+  new rule as the bold headline.
+- Second-to-last slide = the payoff/why. Last slide = CTA.
+- CTA default: "Follow for more." + one voice line ("Your next cut is counting
+  on it."). If my script has a comment keyword CTA, keep that instead.
+
+BRAND SYSTEM (follow exactly — this is the Verto look)
+- Canvas: 1080×1350 (4:5). Black #000000 ground (~80% of the design), subtle
+  dark radial vignette so it isn't flat.
+- Type: Montserrat ONLY — Black 900 headlines, SemiBold 600 for letterspaced
+  uppercase eyebrow labels, Regular 400 support lines. White #FFFFFF text.
+- Accents: tan #CEB890 (light) and #AB9370 (dark) only, ~10% of the design —
+  eyebrows, one glowing key word, and the animated graphics. One accent moment
+  per slide, no more.
+- Effect: "low intensity neon" — a soft tan glow (layered text-shadow) on ONE
+  key word or line per slide, gently pulsing.
+- Slide anatomy top to bottom: eyebrow ("SWAP 1 OF 6 · CALORIES" style) →
+  struck-through kill line (dim, tan strikethrough) → bold white headline →
+  animated graphic zone → support line (white at ~70% opacity, 1.6 line-height)
+  → tan uppercase tease line at the bottom.
+- Photos (if attached): crop to 4:5, dark gradient shade over them so text is
+  always readable, use as the hero slide and optionally bookend the CTA slide.
+
+ANIMATION RULES
+- Words NEVER move. All copy is static and readable the whole time. Motion lives
+  only in the graphic/diagram zone.
+- Every key concept gets a purpose-built animated diagram in the tan/white style:
+  gauges filling, numbers counting up, timeline blocks sliding in one by one,
+  bars growing or dissolving, dashed lines drawing across charts, tags and pills
+  popping in with a glow. Make the animation SHOW the idea, not decorate it.
+- Photo slides get a slow cinematic Ken Burns zoom unless I say static.
+- CTA slide: pulsing pill button ("+ FOLLOW" style, tan outline, soft glow).
+
+DELIVERABLES
+1. Self-contained HTML deck (embed Montserrat as a data URI — no CDN links),
+   with swipe/arrow navigation, per-slide animation replay, and a caption card
+   with a copy button. Publish a live preview.
+2. Render-test every slide in a headless browser and show me each slide.
+3. Export for posting: a 1080×1350 PNG of every slide AND a ~7-second silent
+   H.264/MP4 (yuv420p, 30fps) of every animated slide. Send the files to me
+   individually, named in posting order — I post from my phone, and Instagram
+   carousels can mix photos and videos (videos loop automatically).
+4. Write the post caption in my voice: hook line, the numbered takeaways, the
+   why, then the CTA.
+
+SCRIPT
+[PASTE SCRIPT HERE]
+
+PHOTOS (optional)
+[ATTACH PHOTOS — tell Claude which one is the hero, or let it pick]

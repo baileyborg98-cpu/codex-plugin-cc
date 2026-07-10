@@ -1,55 +1,62 @@
-# Yap Clip — "Twenty-Eight" (Birthday Reflection)
+# Yap Clip — "Twenty-Eight" (Birthday Reflection) — v2
 
-A personal one. Everything in here is true to your actual year and life — the wedding, the Sahara, the work, the community — no invented details. Two cuts: the full campfire version (~90s) and a tight 60s.
+Rewritten against the About Bailey context file. The real arc this time: Brisbane → cabin crew → choosing himself → the one-way ticket in 2022 → Weronika, the Sahara, and Delilah. Two cuts: the full campfire version (~90s) and a tight 60s.
 
 ---
 
-## FULL CUT — ~90 seconds (~235 words)
+## FULL CUT — ~90 seconds (~240 words)
 
-**Hook:** I turn twenty-eight today. So give me ninety seconds to just… yap about it.
+**Hook:** Twenty-eight today. Let me yap for a minute.
 
-No framework today, legend. No three tips. Just a bloke on his birthday thinking out loud.
+No tips today, no framework. Just me, thinking out loud with a coffee.
 
-Twenty-eight. This year I married her. Stood there mid-chaos and had one of those quiet thirty seconds nobody photographed, and it beat every big moment on the schedule. Then we slept in the Sahara on the honeymoon — no signal, more stars than I could count — and for the first time in years my head went completely quiet.
+Ten years ago I'm a kid from Brisbane serving coffees at thirty-five thousand feet, and everyone's telling me I've got a good thing going. Safe job. Clear path. And something in me just knew — this isn't mine.
 
-And here's what I keep coming back to. None of the stuff I'm proudest of at twenty-eight was on the plan at eighteen. Eighteen-year-old me had a completely different map. Most of it fell apart. And thank God it did — because every version of me that didn't work out paid the tuition for the one sat here.
+So I left. First time in my life I ever chose myself. Became a coach. Terrifying. Did it anyway.
 
-What I do now is help people change their lives, and the biggest thing hundreds of transformations have taught me is this: nobody's ever really behind. There's no schedule. There's just people who kept going and people who stopped.
+Then four years ago I did it again — one-way ticket to England. No job waiting. No plan B. Just a bet that the life I wanted actually existed if I went and paid for it.
 
-So that's twenty-eight. Grateful looking back, hungry looking forward — both eyes open. More in love than ever, more ambitious than ever, and finally old enough to know those aren't opposites.
+And now I'm sat here at twenty-eight and the receipts are in. Married Weronika this year. Slept under the stars in the Sahara on our honeymoon. And there's a seven-month-old girl asleep in the next room who thinks I'm the whole world.
 
-Right. Cake.
+None of that was on the safe path, my friend. Not one bit of it.
 
-If you've read this far — go do the thing you're telling yourself you're too late for. You're not. I checked.
+Here's the honest maths of my twenties: every scary decision paid better than every safe one. Every single time. The fear was just the price tag — and it's simpler than you're pretending. You already know the life that's yours. You're just scared to pay for it.
 
-**Delivery:** slowest yap you'll ever film. This is the campfire one — sit down for it if you can. Let "and thank God it did" land with a half-laugh. "Right. Cake." is the tension release — full grin. Final line straight down the lens, warm, no hype.
+I was too. I paid.
+
+Twenty-eight. Delilah's awake. Gotta go.
+
+**Delivery:** slowest yap you'll film. Coffee in hand, mid-morning, not staged. Half-laugh on "thinks I'm the whole world". The maths line is the spine — say it like you're doing the sums right now, not reciting them. Last three lines: quick, warm, walk off camera.
 
 ---
 
 ## TIGHT CUT — ~60 seconds (~150 words)
 
-**Hook:** Twenty-eight today. Quick yap before the cake.
+**Hook:** Twenty-eight today, so here's the honest maths of my twenties.
 
-This year I married her. Slept in the Sahara with no phone signal and a few million stars, and my head went quiet for the first time in years.
+Ten years ago I'm serving coffees at thirty-five thousand feet. Safe job, clear path — and I knew it wasn't mine. So I left to coach. First time I ever chose myself.
 
-And here's the thought I can't shake, legend: nothing I'm proudest of was on the plan at eighteen. That version of me had a whole different map. It fell apart. Thank God — because the failed versions paid the tuition for this one.
+Four years ago, did it again. One-way ticket from Australia to England. No job, no plan B.
 
-My job is watching people change their lives, and if hundreds of transformations have taught me anything, it's that nobody's actually behind. There's no schedule. Just people who kept going and people who stopped.
+And now? Married Weronika this year. Slept in the Sahara on the honeymoon. Got a seven-month-old daughter who thinks I'm the whole world. None of it was on the safe path, my friend.
 
-So: grateful looking back, hungry looking forward. Both eyes open. That's twenty-eight.
+So the maths: every scary decision of my twenties paid better than every safe one. Every time. The fear was just the price tag.
 
-Now do the thing you think you're too late for. You're not. I checked.
+You already know the life that's yours, baby. You're just scared to pay for it. I was too.
 
-**Delivery:** warm and unhurried even at 60s. Smile through the whole back half.
+I paid.
+
+**Delivery:** brisker than the 90 but still warm. Dead stop before "I paid." — that's the whole clip.
 
 ---
 
 ## Caption starter
 
-28 today. No tips, no framework — just the honest version.
-Nothing I'm proud of was on the original plan. The plan falling apart WAS the plan.
-🎂 Tell me one thing you thought you were "too late" for and did anyway.
+28 today. Quick maths on my twenties: every scary decision paid better than every safe one.
+Cabin crew → coach → one-way ticket to the other side of the world → her, the Sahara, and Delilah.
+Life is whatever you fucking make it. 🎂
 
 ## Notes
-- "I checked" works as your signature close here — confident, warm, a bit cheeky.
-- If you film one clip this month, film the 90s version today. Birthday posts earn reach because they're timestamped and human — and this one doubles as a soft founder-story for everyone new to you.
+- Everything in here is from your actual timeline — nothing invented. If "ten years ago" isn't exact for the cabin crew years, adjust the number on camera; the shape holds.
+- "Delilah's awake. Gotta go." is the closer because it's true today and it beats any motivational line — the life IS the proof.
+- MOHR rebrand is confidential so there's no company name anywhere in the scripts.

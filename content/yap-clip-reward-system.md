@@ -10,13 +10,13 @@ Two cuts below: the full conversation (~90s) and a tight 60s version.
 
 **Hook:** You don't need a better meal plan. You need your reward system back.
 
-Right, let me tell you what I actually see, legend, after hundreds of clients.
+Right, let me tell you what I actually see, my friend, after hundreds of clients.
 
 Everyone can follow a diet for two weeks. Everyone. Week three is where it dies — and it's never willpower. It's what's going on upstairs.
 
 Here's the mechanism. The second a food becomes forbidden, your brain runs a marketing campaign for it. "You're not allowed this" is the most powerful advert on earth. You weren't even thinking about the biscuits until the plan said no biscuits.
 
-Then it gets worse. You eat ONE thing off plan and the brain goes — fuck it, I've failed, might as well finish the packet. Zero to a hundred. That's not greed, legend. That's the binge mechanism, and restriction built it.
+Then it gets worse. You eat ONE thing off plan and the brain goes — fuck it, I've failed, might as well finish the packet. Zero to a hundred. That's not greed, baby. That's the binge mechanism, and restriction built it.
 
 So here's the sentence I give my clients, and watch what it does: you have full permission to eat anything, without guilt. I've put crumpets and honey in a fat loss plan. Client nearly fell over — "I'm ALLOWED this?" Allowed. Like food's a parole officer.
 
@@ -34,7 +34,7 @@ Fix the reward system. The body follows. And if you're stuck in the zero-to-100 
 
 **Hook:** Diets don't fail in week one. They die in week three — and it's never willpower.
 
-Here's what's actually happening, legend.
+Here's what's actually happening, my friend.
 
 The moment a food becomes forbidden, your brain runs an advertising campaign for it. "You're not allowed this" is the strongest advert on earth. You weren't even thinking about biscuits until the plan banned biscuits.
 
@@ -42,7 +42,7 @@ Then the killer: you eat ONE thing off plan and the brain goes — fuck it, I've
 
 So I give my clients one sentence: full permission to eat anything, without guilt. I've put crumpets and honey in a fat loss plan — client nearly fell over. And the paradox? When nothing's scarce, nothing's obsessive.
 
-Chocolate isn't bad. Chicken isn't good. It's just food with different jobs. And eating well isn't discipline, legend — it's self-respect.
+Chocolate isn't bad. Chicken isn't good. It's just food with different jobs. And eating well isn't discipline, baby — it's self-respect.
 
 Fix the reward system. The body follows.
 

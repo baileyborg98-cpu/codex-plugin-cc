@@ -15,6 +15,17 @@ All macros are good-faith estimates (±10%) based on typical Aldi UK products �
 
 **Fat note:** most days land at 55–75g fat, so you're naturally under the cap. Burger nights (Tue/Sun) are the high-fat days — the plan balances them with low-fat dinners either side. If a day comes in well under on fat and you want it, add: a whole egg, 20g peanut butter, a row of chocolate, or full-fat mayo in place of light.
 
+## If you fill up fast (his notes)
+
+Hitting 2,600–3,000 kcal is genuinely hard when your appetite taps out early. The trick is calories that don't take up space:
+
+- **Drink some of it.** The blender breakfast (B4), a glass of milk with meals, juice after training — liquid calories barely register on fullness.
+- **Dense beats big.** Honey, jam, biscuit spread, raisins, jelly sweets and chocolate pack calories into a few bites. Popcorn and rice cakes are the opposite — big and filling for almost nothing, so leave those to her.
+- **Sit at the lower end of your protein range (~150–160g).** Protein is the most filling macro there is; the low end still hits your target and frees up room for carbs that go down far easier.
+- **Split meals.** If dinner defeats you, eat half and finish it an hour or two later — it counts exactly the same.
+- **His portions are ceilings, not homework.** Can't face the third wrap or the last 100g of rice? Skip it and close the gap with a no-space dessert instead: 300ml juice and a row of chocolate, or Greek yogurt with honey and a spoon of warmed biscuit spread (~250 kcal either way).
+- **Don't drink water right before meals** — save it for after.
+
 ---
 
 ## The week at a glance
@@ -49,6 +60,11 @@ Night before: oats + fat-free Greek yogurt + milk + caramelised biscuit spread (
 Bacon medallions (all the taste, a fraction of the fat) + egg + ketchup in a toasted bagel.
 - **Her:** 1 bagel, 2 medallions, 1 egg — *~385 kcal | P 25 | C 53 | F 8*
 - **Him:** 1½ bagels, 3 medallions, 2 eggs — *~540 kcal | P 37 | C 55 | F 14*
+
+### B4 — The blender breakfast (his any-day swap)
+For mornings when eating feels like a chore: whey + milk + oats + banana + honey, blitzed. Goes down in two minutes and it's his biggest-calorie breakfast despite being the easiest.
+- **Him:** 1 scoop whey, 300ml semi-skimmed milk, 60g oats, 1 banana, 15g honey — *~645 kcal | P 42 | C 91 | F 11*
+- Works for her too with 30g oats and no honey — *~460 kcal | P 37 | C 60 | F 9*
 
 ---
 
@@ -131,12 +147,12 @@ Have one of these after training. Mix and match — they're all deliberately low
 4. **Rice cakes:** 4 rice cakes + 20g honey + 30g raisins — *~70g C, ~290 kcal, 1g F*
 5. **Zero-fat sweet fix:** 300ml orange juice + 50g jelly sweets + an apple — *~80g C, ~330 kcal, 0g F*
 
-### Him — 100g+ carbs
-1. **Toast & honey:** 4 slices white bloomer toasted + 30g honey — *~102g C, ~500 kcal, 4g F*
-2. **Cereal bowl:** 90g frosted flakes + 300ml skimmed milk + banana — *~115g C, ~530 kcal, 2g F*
+### Him — 100g+ carbs (ordered easiest-to-get-down first)
+1. **Zero-fat sweet fix:** 500ml orange juice + 80g jelly sweets — *~105g C, ~430 kcal, 0g F* — takes up almost no room when you can't face solid food after training
+2. **Liquid carbs:** 500ml orange juice blended with a banana + 40g jelly sweets on the side — *~100g C, ~460 kcal, 0g F*
 3. **Double bagel:** 2 bagels + 20g jam — *~109g C, ~560 kcal, 3g F*
-4. **Rice cakes:** 5 rice cakes + 30g honey + 50g raisins — *~100g C, ~410 kcal, 1g F*
-5. **Zero-fat sweet fix:** 500ml orange juice + 80g jelly sweets — *~105g C, ~430 kcal, 0g F*
+4. **Toast & honey:** 4 slices white bloomer toasted + 30g honey — *~102g C, ~500 kcal, 4g F*
+5. **Cereal bowl:** 90g frosted flakes + 300ml skimmed milk + banana — *~115g C, ~530 kcal, 2g F*
 
 ---
 
@@ -159,12 +175,14 @@ Protein puddings and protein bars are handy but pricey per serving — treat the
 
 **Daily snack budget:** her ~250–350 kcal, him ~350–500 kcal. Lean toward protein snacks on rest days and carb snacks on training days.
 
+**Split by appetite:** he should live off the small-but-dense end of the table — raisins, chocolate, jelly sweets, a glass of milk — maximum calories, minimum space. The big-but-light stuff (popcorn, rice cakes) is hers: it fills you up for very little, which is exactly what he doesn't need.
+
 ---
 
 ## Sanity check — how a training day stacks up
 
 **Her (Monday):** flakes & milk (310) + chicken wraps (420) + post-workout toast & honey (370) + yogurt & honey bowl (180) + banana (105) + fajitas (700) = **~2,085 kcal, ~140g P, ~50g F** ✔
 
-**Him (Monday):** flakes, milk & shake (535) + chicken wraps (640) + post-workout toast & honey (500) + banana (105) + jelly sweets (100) + fajitas (1,030) = **~2,910 kcal, ~175g P, ~55g F** ✔
+**Him (Monday, small-appetite route):** blender breakfast (645) + chicken wraps (640) + post-workout juice & sweets (430) + glass of milk (150) + fajitas with two wraps instead of three (840) + row of chocolate (110) = **~2,815 kcal, ~168g P, ~64g F** ✔ — and roughly a third of it never needed chewing.
 
 On rest days, drop the post-workout carbs and you both land at the lower end of your calorie ranges automatically.

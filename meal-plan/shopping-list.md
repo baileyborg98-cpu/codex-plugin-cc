@@ -78,7 +78,7 @@ Built to keep the cost down: thigh fillets instead of most of the breast, mince 
 - [ ] Protein puddings / protein bars — **only if on offer**; the yogurt bowls do the same job for ~¼ of the price
 
 ## Drinks
-- [ ] Orange juice — **2 × 1L** (from concentrate — same carbs, half the price of fresh)
+- [ ] Orange juice — **3 × 1L** (from concentrate — same carbs, half the price of fresh; long-life cartons are cheapest) — his post-workout liquid carbs will get through most of it
 - [ ] Whey protein — Aldi doesn't reliably stock it, so grab your usual from elsewhere; his breakfast shake assumes 1 scoop (~24g protein)
 
 ---

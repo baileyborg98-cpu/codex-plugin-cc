@@ -21,7 +21,7 @@ All macros are good-faith estimates (±10%) based on typical Aldi UK products �
 
 | Day | Breakfast | Lunch | Dinner (fakeaway) |
 |---|---|---|---|
-| Mon | Frosted flakes + shake | Chicken salad wraps | **Chicken katsu curry** |
+| Mon | Frosted flakes + shake | Chicken salad wraps | **Loaded chicken fajitas** |
 | Tue | Biscoff overnight oats | Chicken pesto pasta (batch) | **Smash burgers & fries** |
 | Wed | Frosted flakes + shake | Chicken pesto pasta (batch) | **Crispy chilli beef** |
 | Thu | Biscoff overnight oats | Tuna & sweetcorn bagel melts | **Chicken doner kebab wraps** |
@@ -83,10 +83,10 @@ Leftovers from last night's fakeaway also slot in here: aim for **her ~450 kcal 
 
 All serve 2. Use spray oil + air fryer/oven instead of deep frying — same crunch, half the fat.
 
-### D1 Monday — Chicken katsu curry
-Butterfly chicken breasts → flour, egg, panko → spray oil, air fryer 200°C ~15–18 min. Katsu sauce from a jar (curry aisle) or curry powder + light coconut milk + soy + honey simmered 5 min. Slice over rice, sauce on top.
-- **Her:** 1 breast, 200g cooked rice — *~660 kcal | P 50 | C 89 | F 11*
-- **Him:** 1½ breasts, 300g cooked rice — *~935 kcal | P 65 | C 125 | F 11*
+### D1 Monday — Loaded chicken fajitas
+Chicken breast strips tossed in fajita seasoning (smoked paprika + cumin + garlic granules + cayenne, or a ~35p sachet), seared in a screaming-hot pan with peppers and onions. Warm the wraps, put everything in the middle of the table with grated cheddar, garlic yogurt sauce and salsa/chilli sauce, and build your own.
+- **Her:** 2 wraps, 125g chicken, 25g cheddar — *~700 kcal | P 48 | C 74 | F 17*
+- **Him:** 3 wraps, 175g chicken, 40g cheddar — *~1,030 kcal | P 70 | C 110 | F 30*
 
 ### D2 Tuesday — Smash burgers & fries
 5% mince, seasoned, rolled into balls, smashed flat in a screaming-hot pan ~2 min a side. Burger cheese, brioche bun, burger sauce (light mayo + ketchup + chopped pickles), oven fries.
@@ -163,8 +163,8 @@ Protein puddings and protein bars are handy but pricey per serving — treat the
 
 ## Sanity check — how a training day stacks up
 
-**Her (Monday):** flakes & milk (310) + chicken wraps (420) + post-workout toast & honey (370) + yogurt & honey bowl (180) + banana (105) + katsu curry (660) = **~2,045 kcal, ~135g P, ~45g F** ✔
+**Her (Monday):** flakes & milk (310) + chicken wraps (420) + post-workout toast & honey (370) + yogurt & honey bowl (180) + banana (105) + fajitas (700) = **~2,085 kcal, ~140g P, ~50g F** ✔
 
-**Him (Monday):** flakes, milk & shake (535) + chicken wraps (640) + post-workout toast & honey (500) + banana (105) + jelly sweets (100) + katsu curry (935) = **~2,815 kcal, ~170g P, ~45g F** ✔
+**Him (Monday):** flakes, milk & shake (535) + chicken wraps (640) + post-workout toast & honey (500) + banana (105) + jelly sweets (100) + fajitas (1,030) = **~2,910 kcal, ~175g P, ~55g F** ✔
 
 On rest days, drop the post-workout carbs and you both land at the lower end of your calorie ranges automatically.

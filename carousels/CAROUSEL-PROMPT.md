@@ -36,6 +36,21 @@ ANIMATION RULES
 - CTA slide: pulsing pill button. Default CTA is "Follow for more" unless the
   script has its own comment keyword — then keep the script's CTA.
 
+EXPORT RULE — POSTER FRAMES (do not skip)
+The first frame of every exported MP4 must be that slide's own content.
+Video recording starts the instant the page is created, so if the deck loads on
+slide 1 and only then navigates to the target slide, slide 1 becomes the poster
+frame and viewers see a flash of the hook before every slide. To prevent it:
+- Open the deck DIRECTLY on the target slide via a boot script in <head>
+  (window.__START_SLIDE), so slide 1 is never painted.
+- Put the export CSS in <head> too, so the chrome is stripped and the stage is
+  locked to 1080x1350 at first paint rather than after load.
+- The deck needs two hooks: `go(window.__START_SLIDE || 0);` and a first-play
+  suppressor in `play()` keyed off `window.__NO_AUTOPLAY`.
+- ALWAYS audit before delivering: extract frame 0 of every MP4 and confirm it
+  shows that slide, not slide 1.
+Reusable tooling lives in carousels/tools/ (export-carousel.js + finish-export.sh).
+
 DELIVERABLES
 1. Build it as a self-contained HTML deck (Montserrat embedded, swipe/arrows,
    replay button, caption card with copy button) and publish a live preview.
@@ -111,6 +126,21 @@ ANIMATION RULES
   popping in with a glow. Make the animation SHOW the idea, not decorate it.
 - Photo slides get a slow cinematic Ken Burns zoom unless I say static.
 - CTA slide: pulsing pill button ("+ FOLLOW" style, tan outline, soft glow).
+
+EXPORT RULE — POSTER FRAMES (do not skip)
+The first frame of every exported MP4 must be that slide's own content.
+Video recording starts the instant the page is created, so if the deck loads on
+slide 1 and only then navigates to the target slide, slide 1 becomes the poster
+frame and viewers see a flash of the hook before every slide. To prevent it:
+- Open the deck DIRECTLY on the target slide via a boot script in <head>
+  (window.__START_SLIDE), so slide 1 is never painted.
+- Put the export CSS in <head> too, so the chrome is stripped and the stage is
+  locked to 1080x1350 at first paint rather than after load.
+- The deck needs two hooks: `go(window.__START_SLIDE || 0);` and a first-play
+  suppressor in `play()` keyed off `window.__NO_AUTOPLAY`.
+- ALWAYS audit before delivering: extract frame 0 of every MP4 and confirm it
+  shows that slide, not slide 1.
+Reusable tooling lives in carousels/tools/ (export-carousel.js + finish-export.sh).
 
 DELIVERABLES
 1. Self-contained HTML deck (embed Montserrat as a data URI — no CDN links),

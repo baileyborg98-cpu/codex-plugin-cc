@@ -7,7 +7,9 @@ FF=$(python3 -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())")
 TRIM=${TRIM:-0.85}   # trims most of the static hold; frame 0 stays the target slide
 
 mkdir -p "$OUT/audit"
-for n in $(seq -w 1 "$N"); do
+# zero-pad to 2 digits: seq -w won't pad when N is single-digit
+for i in $(seq 1 "$N"); do
+  n=$(printf "%02d" "$i")
   "$FF" -y -loglevel error -ss "$TRIM" -i "$OUT/webm/slide-$n.webm" \
     -c:v libx264 -pix_fmt yuv420p -r 30 -crf 18 -movflags +faststart -an \
     "$OUT/videos/slide-$n.mp4"

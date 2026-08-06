@@ -1,7 +1,7 @@
 // Carousel exporter — 1080x1350 stills + silent H.264 MP4s, one per slide.
 //
 // Usage:
-//   DECK=/path/to/index.html OUT=/path/to/exportdir N=10 node export-carousel.js
+//   DECK=/path/to/index.html OUT=/path/to/exportdir N=10 node export-carousel.cjs
 //
 // CRITICAL — the first frame of every MP4 must be its OWN slide.
 // Video recording begins the instant the page is created, so anything the
@@ -21,9 +21,21 @@
 // Verify before delivering: extract frame 0 of every MP4 and confirm it shows
 // that slide, not slide 1.
 
-const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
+
+// Node resolves modules relative to THIS file, but playwright is usually
+// installed in whatever working directory the export is run from. Try both.
+function loadPlaywright() {
+  try {
+    return require('playwright');
+  } catch (e) {
+    const { createRequire } = require('module');
+    const fromCwd = createRequire(path.join(process.cwd(), 'noop.js'));
+    return fromCwd('playwright');
+  }
+}
+const { chromium } = loadPlaywright();
 
 const DECK = process.env.DECK;
 const OUT = process.env.OUT;
@@ -32,7 +44,7 @@ const HOLD_MS = Number(process.env.HOLD_MS || 1000);   // static, composed, corr
 const RUN_MS = Number(process.env.RUN_MS || 7600);     // animation runtime captured
 
 if (!DECK || !OUT || !N) {
-  console.error('Set DECK, OUT and N. e.g. DECK=deck.html OUT=./export N=10 node export-carousel.js');
+  console.error('Set DECK, OUT and N. e.g. DECK=deck.html OUT=./export N=10 node export-carousel.cjs');
   process.exit(1);
 }
 

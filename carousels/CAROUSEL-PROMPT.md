@@ -49,7 +49,7 @@ frame and viewers see a flash of the hook before every slide. To prevent it:
   suppressor in `play()` keyed off `window.__NO_AUTOPLAY`.
 - ALWAYS audit before delivering: extract frame 0 of every MP4 and confirm it
   shows that slide, not slide 1.
-Reusable tooling lives in carousels/tools/ (export-carousel.js + finish-export.sh).
+Reusable tooling lives in carousels/tools/ (export-carousel.cjs + finish-export.sh).
 
 DELIVERABLES
 1. Build it as a self-contained HTML deck (Montserrat embedded, swipe/arrows,
@@ -140,7 +140,7 @@ frame and viewers see a flash of the hook before every slide. To prevent it:
   suppressor in `play()` keyed off `window.__NO_AUTOPLAY`.
 - ALWAYS audit before delivering: extract frame 0 of every MP4 and confirm it
   shows that slide, not slide 1.
-Reusable tooling lives in carousels/tools/ (export-carousel.js + finish-export.sh).
+Reusable tooling lives in carousels/tools/ (export-carousel.cjs + finish-export.sh).
 
 DELIVERABLES
 1. Self-contained HTML deck (embed Montserrat as a data URI — no CDN links),

@@ -47,8 +47,14 @@ frame and viewers see a flash of the hook before every slide. To prevent it:
   locked to 1080x1350 at first paint rather than after load.
 - The deck needs two hooks: `go(window.__START_SLIDE || 0);` and a first-play
   suppressor in `play()` keyed off `window.__NO_AUTOPLAY`.
+- The poster frame is the slide's STATIC (non-.play) state, so no element may
+  be parked invisible in its base rule — no `opacity:0`, no `stroke-dashoffset`
+  holding a line undrawn. Put the hidden value in the keyframes' `from` instead
+  and keep `both` fill; the base rule must render the finished composition.
+- Keep every slide's animation finished inside ~4.5s, or the exported PNG still
+  (captured at 4.6s) will miss the last elements to land.
 - ALWAYS audit before delivering: extract frame 0 of every MP4 and confirm it
-  shows that slide, not slide 1.
+  shows that slide, fully composed — not slide 1, not a half-drawn frame.
 Reusable tooling lives in carousels/tools/ (export-carousel.cjs + finish-export.sh).
 
 DELIVERABLES
@@ -138,8 +144,14 @@ frame and viewers see a flash of the hook before every slide. To prevent it:
   locked to 1080x1350 at first paint rather than after load.
 - The deck needs two hooks: `go(window.__START_SLIDE || 0);` and a first-play
   suppressor in `play()` keyed off `window.__NO_AUTOPLAY`.
+- The poster frame is the slide's STATIC (non-.play) state, so no element may
+  be parked invisible in its base rule — no `opacity:0`, no `stroke-dashoffset`
+  holding a line undrawn. Put the hidden value in the keyframes' `from` instead
+  and keep `both` fill; the base rule must render the finished composition.
+- Keep every slide's animation finished inside ~4.5s, or the exported PNG still
+  (captured at 4.6s) will miss the last elements to land.
 - ALWAYS audit before delivering: extract frame 0 of every MP4 and confirm it
-  shows that slide, not slide 1.
+  shows that slide, fully composed — not slide 1, not a half-drawn frame.
 Reusable tooling lives in carousels/tools/ (export-carousel.cjs + finish-export.sh).
 
 DELIVERABLES

@@ -179,28 +179,41 @@ body{font-family:'Montserrat',-apple-system,'Segoe UI',sans-serif;min-height:100
 .dl-lbls span{flex:1;text-align:center;font-size:18px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dimmer)}
 .dl-hunger{position:relative;margin-top:34px;height:96px}
 .dl-hunger svg{width:100%;height:96px;overflow:visible}
-.hpath{fill:none;stroke:rgba(255,255,255,.5);stroke-width:5;stroke-linecap:round;stroke-dasharray:900;stroke-dashoffset:900}
+.hpath{fill:none;stroke:rgba(255,255,255,.5);stroke-width:5;stroke-linecap:round;stroke-dasharray:900}
 .s7.play .hpath{animation:hdraw 2s ease-out 1.4s both}
-@keyframes hdraw{to{stroke-dashoffset:0}}
+@keyframes hdraw{from{stroke-dashoffset:900}to{stroke-dashoffset:0}}
+@keyframes hdraw1100{from{stroke-dashoffset:1100}to{stroke-dashoffset:0}}
 .hlbl{font-size:19px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;fill:var(--dimmer)}
 
 /* 8 — short deficit */
 .cutplan{width:100%;max-width:860px}
 .cutplan svg{width:100%;display:block;overflow:visible}
 .cp-axis{stroke:rgba(255,255,255,.18);stroke-width:2}
-.cp-slow{fill:none;stroke:rgba(255,255,255,.4);stroke-width:5;stroke-linecap:round;stroke-dasharray:900;stroke-dashoffset:900}
+.cp-slow{fill:none;stroke:rgba(255,255,255,.4);stroke-width:5;stroke-linecap:round;stroke-dasharray:900}
 .s8.play .cp-slow{animation:hdraw 2.2s ease-out .4s both}
-.cp-fast{fill:none;stroke:#CEB890;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:900;stroke-dashoffset:900;filter:drop-shadow(0 0 8px rgba(206,184,144,.5))}
-.s8.play .cp-fast{animation:hdraw 1.6s ease-out 1.4s both}
+/* Series keys live outside the SVG so no label can collide with a line. */
+.cutlegend{display:flex;justify-content:center;gap:34px;margin-bottom:18px}
+.lkey{display:inline-flex;align-items:center;gap:11px;font-size:19px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.lkey i{width:30px;height:5px;border-radius:3px;display:inline-block}
+.lkey.grey{color:var(--dimmer)}
+.lkey.grey i{background:rgba(255,255,255,.42)}
+.lkey.tan{color:var(--tan)}
+.lkey.tan i{background:var(--tan);box-shadow:var(--glow)}
+
+/* Drawn slowly and linearly so each step reads: drop, hold, drop, hold. */
+.cp-fast{fill:none;stroke:#CEB890;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1100;filter:drop-shadow(0 0 8px rgba(206,184,144,.5))}
+.s8.play .cp-fast{animation:hdraw1100 2.4s linear 1s both}
 .cp-lbl{font-size:20px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
 .cp-lbl.grey{fill:rgba(255,255,255,.42)}
 .cp-lbl.tan{fill:#CEB890}
-.cp-flag{opacity:0}
-.s8.play .cp-flag{animation:fade .6s ease 3.1s both}
-.cutchips{display:flex;justify-content:center;gap:16px;margin-top:30px}
-.cchip{padding:14px 28px;border:2px solid var(--tan);border-radius:99px;color:var(--tan);font-size:21px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;box-shadow:var(--glow)}
-.s8.play .cchip:nth-child(1){animation:pop .45s cubic-bezier(.3,1.6,.4,1) 3.3s both}
-.s8.play .cchip:nth-child(2){animation:pop .45s cubic-bezier(.3,1.6,.4,1) 3.6s both}
+/* each marker lands as the line reaches that maintenance shelf */
+.s8.play .cp-flag.f1{animation:fade .5s ease 1.9s both}
+.s8.play .cp-flag.f2{animation:fade .5s ease 2.8s both}
+.cutchips{display:flex;justify-content:center;gap:14px;margin-top:28px;flex-wrap:wrap}
+.cchip{padding:13px 24px;border:2px solid var(--tan);border-radius:99px;color:var(--tan);font-size:19px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;box-shadow:var(--glow)}
+.s8.play .cchip:nth-child(1){animation:pop .45s cubic-bezier(.3,1.6,.4,1) 3.6s both}
+.s8.play .cchip:nth-child(2){animation:pop .45s cubic-bezier(.3,1.6,.4,1) 3.82s both}
+.s8.play .cchip:nth-child(3){animation:pop .45s cubic-bezier(.3,1.6,.4,1) 4.04s both}
 
 /* 9 — CTA */
 .s9 .hl{font-size:62px}
@@ -381,31 +394,39 @@ body{font-family:'Montserrat',-apple-system,'Segoe UI',sans-serif;min-height:100
       <!-- 8 · SHORT DEFICIT -->
       <section class="slide s8" aria-label="Slide 8 of 9">
         <p class="eyebrow">Lever 7 &middot; The cut itself</p>
-        <h2 class="hl">Short and sharp beats<br>long and slow.</h2>
+        <h2 class="hl">Cut hard. Reset.<br>Then go again.</h2>
         <div class="gfx">
           <div class="cutplan">
-            <svg viewBox="0 0 860 300" aria-hidden="true">
-              <line class="cp-axis" x1="60" y1="20" x2="60" y2="250"/>
-              <line class="cp-axis" x1="60" y1="250" x2="840" y2="250"/>
-              <!-- slow grind plateaus HIGHER: months in, still less fat lost -->
-              <path class="cp-slow" d="M70,45 C260,95 480,130 830,150"/>
-              <text class="cp-lbl grey" x="830" y="130" text-anchor="end">long, slow grind</text>
-              <!-- short sharp cut gets lower, faster, then holds -->
-              <path class="cp-fast" d="M70,45 L340,195 L830,195"/>
-              <text class="cp-lbl tan" x="78" y="230">1% body weight / week</text>
-              <text class="cp-lbl tan" x="830" y="230" text-anchor="end">short, then hold</text>
-              <g class="cp-flag">
-                <circle cx="340" cy="195" r="8" fill="#CEB890"/>
-                <text class="cp-lbl tan" x="356" y="176">back to maintenance</text>
+            <div class="cutlegend">
+              <span class="lkey grey"><i></i>long and slow</span>
+              <span class="lkey tan"><i></i>short, sharp, repeated</span>
+            </div>
+            <svg viewBox="0 0 860 340" aria-hidden="true">
+              <line class="cp-axis" x1="60" y1="20" x2="60" y2="300"/>
+              <line class="cp-axis" x1="60" y1="300" x2="840" y2="300"/>
+              <text class="cp-lbl grey" x="66" y="34">body weight</text>
+
+              <!-- one long shallow grind: stalls high, never gets there -->
+              <path class="cp-slow" d="M70,45 C300,70 560,120 830,168"/>
+
+              <!-- staircase: steep deficit, flat at maintenance, steep again -->
+              <path class="cp-fast" d="M70,45 L260,135 L390,135 L580,225 L710,225 L830,282"/>
+
+              <g class="cp-flag f1">
+                <text class="cp-lbl tan" x="325" y="118" text-anchor="middle">&uarr; calories back up</text>
+              </g>
+              <g class="cp-flag f2">
+                <text class="cp-lbl tan" x="645" y="208" text-anchor="middle">&uarr; calories back up</text>
               </g>
             </svg>
             <div class="cutchips">
-              <span class="cchip">5&ndash;6 weeks</span>
-              <span class="cchip">then reset</span>
+              <span class="cchip">5&ndash;6 wks deficit</span>
+              <span class="cchip">2&ndash;4 wks maintenance</span>
+              <span class="cchip">repeat</span>
             </div>
           </div>
         </div>
-        <p class="support">That's how you dodge<br>the metabolism slowdown.</p>
+        <p class="support">1% of body weight a week, then back to maintenance<br>to reset. That's how you dodge the slowdown.</p>
         <p class="tease">put it together &rarr;</p>
       </section>
 

@@ -36,6 +36,18 @@ ANIMATION RULES
 - CTA slide: pulsing pill button. Default CTA is "Follow for more" unless the
   script has its own comment keyword — then keep the script's CTA.
 
+HARD BAN: NO DASHES. NO EXCEPTIONS.
+Never use an em dash, an en dash, or a hyphen as punctuation. Not in slide
+copy, not in captions, not in headlines, not anywhere the reader can see.
+This is absolute and overrides any style instinct.
+- Instead of an em dash, use a full stop, a comma, a colon, or split the
+  sentence in two. "Fat down. Muscle kept." not "Fat down, muscle kept."
+- Number ranges spell the word: "5 to 6 weeks", "2 to 4 sets", "50 to 59 kg".
+  NEVER "5-6 weeks" or "5 to 6" written with a dash of any kind.
+- Watch the HTML entities too: &mdash; and &ndash; are banned the same way.
+- Hyphens inside ordinary compound words (front-load, full-body) are spelling,
+  not punctuation, and are allowed. If in doubt, reword to avoid it.
+
 EXPORT RULE — POSTER FRAMES (do not skip)
 The first frame of every exported MP4 must be that slide's own content.
 Video recording starts the instant the page is created, so if the deck loads on
@@ -132,6 +144,18 @@ ANIMATION RULES
   popping in with a glow. Make the animation SHOW the idea, not decorate it.
 - Photo slides get a slow cinematic Ken Burns zoom unless I say static.
 - CTA slide: pulsing pill button ("+ FOLLOW" style, tan outline, soft glow).
+
+HARD BAN: NO DASHES. NO EXCEPTIONS.
+Never use an em dash, an en dash, or a hyphen as punctuation. Not in slide
+copy, not in captions, not in headlines, not anywhere the reader can see.
+This is absolute and overrides any style instinct.
+- Instead of an em dash, use a full stop, a comma, a colon, or split the
+  sentence in two. "Fat down. Muscle kept." not "Fat down, muscle kept."
+- Number ranges spell the word: "5 to 6 weeks", "2 to 4 sets", "50 to 59 kg".
+  NEVER "5-6 weeks" or "5 to 6" written with a dash of any kind.
+- Watch the HTML entities too: &mdash; and &ndash; are banned the same way.
+- Hyphens inside ordinary compound words (front-load, full-body) are spelling,
+  not punctuation, and are allowed. If in doubt, reword to avoid it.
 
 EXPORT RULE — POSTER FRAMES (do not skip)
 The first frame of every exported MP4 must be that slide's own content.

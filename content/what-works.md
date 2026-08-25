@@ -1,6 +1,6 @@
 # What Works
 
-Breakdowns of the three best performing reels. Three different engines. They do different jobs and the numbers prove it.
+Breakdowns of the four best performing reels. Four different engines. They do different jobs and the numbers prove it.
 
 ---
 
@@ -123,56 +123,97 @@ That split is the format. Text reveals, audio deadpans, visual contradicts.
 
 ---
 
-# WHAT THE THREE CURVES SAY TOGETHER
+# FORMAT D: the observation reel
 
-| | Accusation (abs) | Satire (cookie dough) | Sequence (Corfu) |
-|---|---|---|---|
-| Length | 57s | 39s | 17s |
-| Beat rate | 5s then ~3s | 4 to 10s, uneven | 2s throughout |
-| Retention at 5s | ~50% | ~55% | ~75% |
-| Retention at end | ~20% | ~18% | ~45% |
-| Comment rate | 0.6%, higher | 0.0%, lower | higher |
-| Non followers | 93.6% | 96.3% | 98.0% |
+**The hotel light switch one. 19 seconds. 94.8% non followers. Comment rate above baseline.**
 
-## 1. The five second cliff is a beat rate problem, not a hook problem
+## The script, timestamped
 
-Both fitness reels lose 45 to 50% before second five. The travel one loses about 22%. Same account, same face, same week.
+```
+       [on screen] Nobody has ever found the right hotel light
+       switch first go
+00:04  you're playing hide-and-go-seek with the light switches,
+       trying to find the correct light switch for the light itself.
+00:09  But the weird one is, is when you finally found it and then
+       you try to find the next one, and that's also the same switch
+       for the switch is turned off.
+00:18  Very fun game.
+```
 
-The difference is how often something changes. The travel reel puts a new line and a new visual on screen every two seconds without fail, so at any moment the next payoff is closer than the swipe. Both fitness reels open with one long sentence and hold on a talking head, and the viewer has to buy five seconds on credit before anything arrives.
+## The three moves
 
-**This is the fix for everything.** Nothing on screen should last longer than two to three seconds in the opening stretch. Cut to a different angle, change the on screen text, pick something up, move rooms. The abs script doesn't need rewriting, it needs cutting.
+**1. A claim nobody will argue with.** "Nobody has ever found the right hotel light switch first go." Universal, oddly specific, and true. It costs the viewer nothing to agree, so they stay.
 
-## 2. Payoff timing is format dependent, so don't copy one rule across all three
+**2. Name the shared experience precisely.** "Hide and go seek with the light switches" gives a name to something everyone has done and nobody has ever described. That naming is the entire value of the format.
 
-Accusation needs the payoff by second three, because the tension is a question the viewer wants answered. Satire can hold its turn until 74% through, because the tension is watching whether you break character. Sequence puts the payoff on the final line and uses the rhythm itself to carry everything before it.
+**3. Deadpan two word verdict.** "Very fun game." No explanation, no lesson, no call to action. The flatness is the joke.
 
-Never put a satire turn early. Never put an accusation payoff late. Never let a sequence break its metronome.
+## What this format gets for free
 
-## 3. Sequence retains more than twice as well as anything else
+Comment rate is above baseline with no comment door built in, because relatable annoyance generates replies automatically. People want to say they've done it, or add their own version, or tag whoever they were in the hotel with. Format A had to earn that with Jimmy. This format gets it by existing.
 
-45% finished the travel reel. Around 20% finished either fitness reel. Some of that is length, but not all of it, because the travel curve is a gentle slope the whole way rather than a cliff with a flat tail.
+## The mistake in this one
 
-A cliff plus a flat tail means one hard filter at the start and then a loyal remainder. A gentle slope means almost nobody is being actively lost, they're just gradually arriving at the end. The second shape is healthier and the two second beat is what produces it.
+The beat at 00:09 runs nine seconds and the sentence is tangled. "But the weird one is, is when you finally found it and then you try to find the next one, and that's also the same switch for the switch is turned off." It's the longest single beat across every reel here and the retention line falls off a shelf underneath it, from roughly 58% down to 35%.
 
-## 4. Cold reach ranks travel first, and all three reach cold
-
-98.0%, then 96.3%, then 93.6%. Every one of these is finding people who don't follow you, so none of this is an audience problem.
-
-Worth watching over the next month: travel reaches widest but fitness is what sells coaching. Reach and intent are not the same number, so don't let 98% pull the whole account toward travel without checking what actually turns into enquiries.
-
-## 5. Comments come from something to type
-
-Jimmy got comments. The cookie dough got none. The travel one got comments too, most likely because it prompts a reply people already want to make, either naming where they'd go or arguing about Leeds Bradford.
-
-Satire is the only one of the three that closes the door completely. You get it and you swipe. Fix is a comment door on the last line, so keep the broccoli land and follow it with something like "tell me the dumbest rule you've been given, I'll go first."
-
-## 6. Length is not the problem
-
-57 seconds held roughly 20% on a 93.6% cold audience. Stop assuming shorter is safer. Seventeen seconds retains a higher percentage, but that's mechanical, and a 57 second video that holds 20% is delivering far more watch time per view than a 17 second one holding 45%.
+The rewrite is short and clean. "Then you find it. Go looking for the next one. Same switch. Off again." Four beats, four seconds, same joke, and everyone still there at 0:09 arrives at "very fun game" instead of a third of them.
 
 ---
 
-# THE THREE TEMPLATES
+# WHAT THE FOUR CURVES SAY TOGETHER
+
+| | Accusation (abs) | Satire (cookie dough) | Sequence (Corfu) | Observation (light switch) |
+|---|---|---|---|---|
+| Length | 57s | 39s | 17s | 19s |
+| Longest single beat | 5s, at the open | 10s | 4s | 9s, mid video |
+| Retention at 5s | ~50% | ~55% | ~75% | ~78% |
+| Retention at end | ~20% | ~18% | ~45% | ~30% |
+| Comment rate | 0.6%, higher | 0.0%, lower | higher | higher |
+| Non followers | 93.6% | 96.3% | 98.0% | 94.8% |
+
+## 1. Retention tracks beat length, everywhere in the video
+
+This is the finding. It holds across all four and it explains every curve you've sent.
+
+The two fitness reels open with a five second sentence over a static shot and lose half the audience before anything arrives. Corfu changes line and visual every two seconds and slides gently to 45%. The light switch reel opens well on short beats, holds 78% at five seconds, then hits one nine second tangled sentence and drops 23% underneath it before flattening again.
+
+Wherever a beat runs long, the line falls. Wherever beats stay short, the line holds. It doesn't matter whether the long beat is at the start or in the middle.
+
+**So the rule is not "fix your hook."** It's that nothing anywhere in the video should sit longer than about three seconds without the line, the shot, or the on screen text changing. The abs script doesn't need rewriting, it needs cutting. The light switch one needed one sentence broken into four.
+
+## 2. Payoff timing is format dependent, so don't copy one rule across all three
+
+Accusation needs the payoff by second three, because the tension is a question the viewer wants answered. Satire can hold its turn until 74% through, because the tension is watching whether you break character. Sequence puts the payoff on the final line and lets the rhythm carry everything before it. Observation has no payoff to time, the value arrives continuously as recognition, and the closing verdict is a bow rather than a reveal.
+
+Never put a satire turn early. Never put an accusation payoff late. Never let a sequence break its metronome. Never explain an observation.
+
+## 3. Curve shape matters more than the final number
+
+45% finished Corfu, 30% finished the light switch one, around 20% finished either fitness reel. But the shape tells you more than the number.
+
+A cliff plus a flat tail, which is both fitness reels, means one hard filter at the start and then a loyal remainder. A gentle slope, which is Corfu, means almost nobody is being actively rejected, they're just arriving at the end. A hold then a mid video shelf, which is the light switch one, means you had them and then lost them at an identifiable moment.
+
+The third shape is the most useful one to get, because it points at the exact sentence to fix.
+
+## 4. All four reach cold, and the spread is narrow
+
+98.0%, 96.3%, 94.8%, 93.6%. Every one of these is finding people who don't follow you and the gap between best and worst is under five points, so reach is not your problem and no format here is failing at it.
+
+Worth watching over the next month: travel and observation reach widest, but fitness is what sells coaching. Reach and intent are not the same number, so don't let 98% quietly pull the account away from the content that produces enquiries.
+
+## 5. Comments come from something to type, and two formats get it free
+
+Three of the four came in above baseline. Jimmy earned it with a character people can quote. Corfu earned it by prompting a reply people already want to make. The light switch one earned it by being a shared annoyance, which generates replies automatically because everyone wants to say they've done it.
+
+Satire is the only one that closes the door completely. You get it and you swipe. Fix is a comment door on the last line, so keep the broccoli land and follow it with something like "tell me the dumbest rule you've been given, I'll go first."
+
+## 6. Length is not the problem
+
+57 seconds held roughly 20% on a 93.6% cold audience. Stop assuming shorter is safer. A 57 second video holding 20% delivers far more watch time per view than a 17 second one holding 45%.
+
+---
+
+# THE FOUR TEMPLATES
 
 **Accusation**
 ```
@@ -207,3 +248,14 @@ Save the actual point for the final line
 Land on the detail that reframes everything before it
 ```
 Use for anything that is a sequence of real events. Travel, a training day, a client's week, an airport run, what a Saturday actually looks like.
+
+**Observation**
+```
+Open on a claim nobody will argue with, on screen
+Name the shared experience in words nobody has used for it before
+Escalate to the second layer of the same annoyance
+Keep every beat under three seconds, this is where these die
+Close on a flat verdict of two or three words
+Never explain it
+```
+Use for any small universal irritation you can film yourself inside. Hotel light switches, airport queues, gym equipment, hotel gyms, packing, jet lag, prams, anything everyone has met and nobody has named.

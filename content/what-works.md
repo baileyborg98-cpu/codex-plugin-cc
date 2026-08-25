@@ -1,6 +1,6 @@
 # What Works
 
-Breakdowns of the two best performing fitness reels. Two different engines. They do different jobs and the numbers prove it.
+Breakdowns of the three best performing reels. Three different engines. They do different jobs and the numbers prove it.
 
 ---
 
@@ -94,44 +94,85 @@ That split is the format. Text reveals, audio deadpans, visual contradicts.
 
 ---
 
-# WHAT THE TWO CURVES SAY TOGETHER
+# FORMAT C: the sequence reel
 
-| | Accusation (abs) | Satire (cookie dough) |
-|---|---|---|
-| Length | 57s | 39s |
-| Payoff lands at | 0:05, 9% in | 0:29, 74% in |
-| Retention at 5s | ~50% | ~55% |
-| Retention at end | ~20% | ~18% |
-| Comment rate | 0.6%, higher | 0.0%, lower |
-| Non followers | 93.6% | 96.3% |
+**The Corfu one. 17 seconds. 98.0% non followers. Comment rate above baseline. 45% still watching at the end.**
 
-## 1. The first five seconds cost you half your audience every single time
+## The script, timestamped
 
-Both reels lose 45 to 50% before second five, then go nearly flat for the rest. Identical shape on two completely different formats. This is not a content problem, it's a structural one, and it's the highest leverage fix available to you.
+```
+00:00  This is how great it is living in the UK.
+00:02  On a Friday, you can close the laptop down.
+00:04  Book an Uber after work.
+00:06  Arrive at Leeds Bradford Airport
+00:08  And then you board a plane
+00:09  Then land in Corfu, Greece, and spend the whole weekend here,
+       exploring
+00:13  Fly back Sunday night and not use any annual leave days.
+```
 
-The abs reel is the painful example. Its single best line, the reversal, sits at 0:05, so half the audience left before hearing it. Compress the setup and land the payoff by second three. "Let me guess, eight months dieting, still no abs" then straight into the reversal.
+## The four moves
 
-## 2. Payoff timing is format dependent, so don't copy one rule across both
+**1. A claim that could go either way.** "This is how great it is living in the UK" reads as though it might be sarcasm, so there's a small tension about whether you mean it. Then you prove it earnestly and the tension pays.
 
-Accusation format needs the payoff almost immediately, because the tension is a question the viewer wants answered. Satire can hold its turn until 74% through, because the tension is watching whether you'll break character. The cookie dough in shot is doing the work that the reversal does in Format A.
+**2. Two second metronome.** 00:00, 00:02, 00:04, 00:06, 00:08, 00:09. Every beat is a new place and a new shot. This rhythm is the entire reason retention holds, and it's the thing missing from the fitness reels.
 
-Never put a satire turn early. Never put an accusation payoff late.
+**3. Flat, factual beats.** Close the laptop. Book an Uber. Board a plane. No adjectives, no selling. The footage is doing the persuading, so the words stay out of the way.
 
-## 3. Satire travels furthest, accusation gets the comments
-
-96.3% versus 93.6% non followers, so both reach cold, satire slightly wider. But comment rate splits hard: 0.6% and above baseline for Jimmy, 0.0% and below for the cookie dough.
-
-The reason is Jimmy. A named character gives people something to quote, tag a mate under, and argue with. Satire is complete in itself, you get it and you swipe, there's nothing to add.
-
-**The fix for satire: give them the thing to type.** End on a line that opens a door rather than closing one, so instead of stopping at "never once had a container of broccoli in my fridge", follow with something like "tell me the dumbest rule you've been given, I'll go first." Same joke, now with a reason to comment.
-
-## 4. Length is not the problem
-
-57 seconds held roughly 20% to the end on a 93.6% cold audience. 39 seconds held about the same. Stop assuming shorter is safer.
+**4. The reframe on the last line.** "And not use any annual leave days." Everything before it was a nice weekend. That one detail turns it into a point about how you've arranged your life. Save the meaning for last.
 
 ---
 
-# THE TWO TEMPLATES
+# WHAT THE THREE CURVES SAY TOGETHER
+
+| | Accusation (abs) | Satire (cookie dough) | Sequence (Corfu) |
+|---|---|---|---|
+| Length | 57s | 39s | 17s |
+| Beat rate | 5s then ~3s | 4 to 10s, uneven | 2s throughout |
+| Retention at 5s | ~50% | ~55% | ~75% |
+| Retention at end | ~20% | ~18% | ~45% |
+| Comment rate | 0.6%, higher | 0.0%, lower | higher |
+| Non followers | 93.6% | 96.3% | 98.0% |
+
+## 1. The five second cliff is a beat rate problem, not a hook problem
+
+Both fitness reels lose 45 to 50% before second five. The travel one loses about 22%. Same account, same face, same week.
+
+The difference is how often something changes. The travel reel puts a new line and a new visual on screen every two seconds without fail, so at any moment the next payoff is closer than the swipe. Both fitness reels open with one long sentence and hold on a talking head, and the viewer has to buy five seconds on credit before anything arrives.
+
+**This is the fix for everything.** Nothing on screen should last longer than two to three seconds in the opening stretch. Cut to a different angle, change the on screen text, pick something up, move rooms. The abs script doesn't need rewriting, it needs cutting.
+
+## 2. Payoff timing is format dependent, so don't copy one rule across all three
+
+Accusation needs the payoff by second three, because the tension is a question the viewer wants answered. Satire can hold its turn until 74% through, because the tension is watching whether you break character. Sequence puts the payoff on the final line and uses the rhythm itself to carry everything before it.
+
+Never put a satire turn early. Never put an accusation payoff late. Never let a sequence break its metronome.
+
+## 3. Sequence retains more than twice as well as anything else
+
+45% finished the travel reel. Around 20% finished either fitness reel. Some of that is length, but not all of it, because the travel curve is a gentle slope the whole way rather than a cliff with a flat tail.
+
+A cliff plus a flat tail means one hard filter at the start and then a loyal remainder. A gentle slope means almost nobody is being actively lost, they're just gradually arriving at the end. The second shape is healthier and the two second beat is what produces it.
+
+## 4. Cold reach ranks travel first, and all three reach cold
+
+98.0%, then 96.3%, then 93.6%. Every one of these is finding people who don't follow you, so none of this is an audience problem.
+
+Worth watching over the next month: travel reaches widest but fitness is what sells coaching. Reach and intent are not the same number, so don't let 98% pull the whole account toward travel without checking what actually turns into enquiries.
+
+## 5. Comments come from something to type
+
+Jimmy got comments. The cookie dough got none. The travel one got comments too, most likely because it prompts a reply people already want to make, either naming where they'd go or arguing about Leeds Bradford.
+
+Satire is the only one of the three that closes the door completely. You get it and you swipe. Fix is a comment door on the last line, so keep the broccoli land and follow it with something like "tell me the dumbest rule you've been given, I'll go first."
+
+## 6. Length is not the problem
+
+57 seconds held roughly 20% on a 93.6% cold audience. Stop assuming shorter is safer. Seventeen seconds retains a higher percentage, but that's mechanical, and a 57 second video that holds 20% is delivering far more watch time per view than a 17 second one holding 45%.
+
+---
+
+# THE THREE TEMPLATES
 
 **Accusation**
 ```
@@ -155,3 +196,14 @@ Personal proof, not argument
 Comment door on the very last line
 ```
 Use for any rigid rule you can act out breaking while you recite it. Food rules, meal timing, prep culture, cardio rules, gym etiquette nonsense.
+
+**Sequence**
+```
+Open with a complete claim inside two seconds
+One beat every two seconds, no exceptions
+Each beat is a new visual, not a new sentence over the same shot
+Beats are plain and factual, the pictures do the persuading
+Save the actual point for the final line
+Land on the detail that reframes everything before it
+```
+Use for anything that is a sequence of real events. Travel, a training day, a client's week, an airport run, what a Saturday actually looks like.

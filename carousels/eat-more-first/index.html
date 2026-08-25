@@ -71,11 +71,11 @@ body{font-family:'Montserrat',-apple-system,'Segoe UI',sans-serif;min-height:100
 
 /* 1. hook: the only way out is up */
 .s1 .hl{font-size:60px}
-.upwrap{width:100%;max-width:560px;display:flex;flex-direction:column;align-items:center;gap:26px}
+.upwrap{width:100%;max-width:730px;display:flex;flex-direction:column;align-items:center;gap:26px}
 .up-plot{position:relative;width:100%;height:320px;border-bottom:2px solid rgba(255,255,255,.18)}
 .up-floor{position:absolute;left:0;right:0;bottom:34%;border-top:3px dashed rgba(255,255,255,.3)}
-.up-floor b{position:absolute;left:4px;top:-32px;font-size:19px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dimmer)}
-.up-bar{position:absolute;left:28%;right:28%;bottom:0;height:78%;border-radius:12px 12px 0 0;background:linear-gradient(180deg,var(--tan),var(--tan-dark));box-shadow:var(--glow);transform-origin:bottom;display:flex;align-items:flex-start;justify-content:center;padding-top:14px;font-size:26px;font-weight:900;color:#000}
+.up-floor b{position:absolute;left:0;top:-30px;font-size:19px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dimmer)}
+.up-bar{position:absolute;left:34%;right:34%;bottom:0;height:78%;border-radius:12px 12px 0 0;background:linear-gradient(180deg,var(--tan),var(--tan-dark));box-shadow:var(--glow);transform-origin:bottom;display:flex;align-items:flex-start;justify-content:center;padding-top:14px;font-size:26px;font-weight:900;color:#000}
 .s1.play .up-bar{animation:riseup 1.6s cubic-bezier(.25,.85,.3,1) .5s both}
 @keyframes riseup{from{transform:scaleY(.43)}to{transform:scaleY(1)}}
 .up-arrow{font-size:44px;font-weight:900;color:var(--tan);text-shadow:var(--glow)}
@@ -183,7 +183,7 @@ body{font-family:'Montserrat',-apple-system,'Segoe UI',sans-serif;min-height:100
         <div class="gfx">
           <div class="upwrap">
             <div class="up-plot">
-              <div class="up-floor"><b>where you are now</b></div>
+              <div class="up-floor"><b>you are here</b></div>
               <div class="up-bar">your calories</div>
             </div>
             <p class="up-arrow">&uarr;</p>

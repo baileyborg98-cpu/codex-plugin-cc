@@ -195,3 +195,38 @@ SCRIPT
 
 PHOTOS (optional)
 [ATTACH PHOTOS — tell Claude which one is the hero, or let it pick]
+
+---
+
+# Reel variant — same content, one continuous vertical video
+
+Use this when a topic is being trialled in both formats. Keep the wording, the
+brand tokens and the animations identical to the carousel so the A/B test is
+measuring format, not copy.
+
+FRAME AND SAFE AREA
+- 1080×1920 (9:16). One MP4, not one file per slide.
+- Instagram chrome eats the frame. Every scene sits inside a safe band:
+  268px clear at the top, 452px at the bottom, 84px each side.
+- Top align the composition (eyebrow, headline, graphic, support) and let the
+  leftover black fall at the bottom, where the caption and buttons land.
+- Nothing critical in the right 180px, where the action buttons sit.
+
+PACING
+- 7 scenes, roughly 4 seconds each, about 29 seconds total.
+- Cues live in one CUES array in the deck script so the timing is editable in
+  one place. Scene animations must finish inside their own cue window.
+- Crossfade scenes at .34s. Words still never animate; only the graphic zone
+  moves, exactly as in the carousel.
+- A thin tan progress rail across the top gives the viewer a reason to stay.
+- A quiet Verto wordmark rides the whole reel and steps aside on the closing
+  card, which carries the full lockup.
+
+EXPORT
+- REEL=index.html OUT=./export N=7 node carousels/tools/export-reel.cjs
+- OUT=./export bash carousels/tools/finish-reel.sh
+- Same poster frame rule as the carousel: the exporter holds a static, fully
+  composed scene 1 before starting the timeline, so the cover frame is never a
+  half painted page. Audit frame0.png and the beat frames before delivering.
+- Deliver the MP4, a cover still, and a caption written fresh for the reel. The
+  reel caption must not be the carousel caption reused.

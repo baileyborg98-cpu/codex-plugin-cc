@@ -3,7 +3,8 @@
 # Usage: OUT=/path/to/exportdir N=10 ./finish-export.sh
 set -euo pipefail
 : "${OUT:?set OUT}" ; : "${N:?set N}"
-FF=$(python3 -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())")
+# Set FF to point at your own ffmpeg. Falls back to the imageio wheel.
+FF="${FF:-$(python3 -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())")}"
 TRIM=${TRIM:-0.85}   # trims most of the static hold; frame 0 stays the target slide
 
 mkdir -p "$OUT/audit"

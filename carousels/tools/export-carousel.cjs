@@ -66,12 +66,17 @@ function pageHtml(i) {
 
 const pad = (i) => String(i + 1).padStart(2, '0');
 
+// ONLY=3,7 re-exports just those slides into an existing export dir, which
+// beats re-recording a ten slide deck to fix one label. Omit it for a full run.
+const only = (process.env.ONLY || '').split(',').map(s => Number(s.trim())).filter(Boolean);
+const slides = only.length ? only.map(n => n - 1) : Array.from({ length: N }, (_, i) => i);
+
 (async () => {
   const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 
   // Stills: composed slide with its animation settled.
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
-  for (let i = 0; i < N; i++) {
+  for (const i of slides) {
     await page.setContent(pageHtml(i), { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
     await page.evaluate((k) => window.__go(k), i);
@@ -82,7 +87,7 @@ const pad = (i) => String(i + 1).padStart(2, '0');
   await page.close();
 
   // Videos: one recording context per slide.
-  for (let i = 0; i < N; i++) {
+  for (const i of slides) {
     const ctx = await browser.newContext({
       viewport: { width: 1080, height: 1350 },
       recordVideo: { dir: path.join(OUT, 'webm'), size: { width: 1080, height: 1350 } }

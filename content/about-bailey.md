@@ -26,8 +26,20 @@
 
 ## Outside Work
 - F1 fan.
+- Snowboarding.
 - Travel and adventure remain the throughline of both life and content.
 - Values-led.
+
+## Deck composition
+Decks are never purely education. Every deck mixes:
+- Education (masterclass material, see `knowledge-bank.md`)
+- Life, values, how he sees the world
+- Motivation
+- Being a dad
+- Snowboarding
+- Travel, and the Australia to UK move
+
+The education earns the authority, the life content earns the trust. A deck that's all teaching reads like a course.
 
 ## How to use this
 When writing scripts, captions, or yaps for Bailey: pull tone and structure from the skills, pull substance and stories from this doc and from what he tells you directly. Don't invent specifics he hasn't given you.

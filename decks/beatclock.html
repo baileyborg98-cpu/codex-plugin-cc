@@ -1,0 +1,612 @@
+<title>Beat Clock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#0D0D0D; --surface:#16130F; --raise:#1F1A14; --line:#2E2820;
+  --gold:#D4BC94; --gold-soft:rgba(212,188,148,.14); --gold-line:rgba(212,188,148,.3);
+  --text:#EBE0CF; --muted:#968B7E; --done:#7FA37A;
+  --shadow:0 1px 0 rgba(255,255,255,.03) inset;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --ground:#E7DCC9; --surface:#F5EFE4; --raise:#EDE4D4; --line:#D6C8AF;
+    --gold:#8A6B3D; --gold-soft:rgba(138,107,61,.1); --gold-line:rgba(138,107,61,.32);
+    --text:#16130F; --muted:#6B6154; --done:#4C6B47;
+    --shadow:0 1px 0 rgba(255,255,255,.6) inset;
+  }
+}
+:root[data-theme="light"]{
+  --ground:#E7DCC9; --surface:#F5EFE4; --raise:#EDE4D4; --line:#D6C8AF;
+  --gold:#8A6B3D; --gold-soft:rgba(138,107,61,.1); --gold-line:rgba(138,107,61,.32);
+  --text:#16130F; --muted:#6B6154; --done:#4C6B47;
+  --shadow:0 1px 0 rgba(255,255,255,.6) inset;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--ground); color:var(--text);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px; line-height:1.5; margin:0;
+  padding-block:22px 64px; padding-left:18px; padding-right:18px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:640px;margin:0 auto}
+
+header{display:flex;flex-direction:column;gap:14px;margin-bottom:22px}
+.topline{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+h1{
+  font-family:Montserrat,Inter,sans-serif; font-weight:800; font-size:30px;
+  letter-spacing:-.02em; line-height:1.05; margin:0; text-wrap:balance;
+}
+.sub{color:var(--muted);font-size:13px;margin:5px 0 0}
+#themeBtn{
+  flex:none;background:var(--surface);color:var(--muted);border:1px solid var(--line);
+  border-radius:999px;width:36px;height:36px;font-size:15px;cursor:pointer;line-height:1;
+}
+#themeBtn:hover{color:var(--gold);border-color:var(--gold-line)}
+
+.meter{display:flex;flex-direction:column;gap:7px}
+.meterhead{display:flex;justify-content:space-between;align-items:baseline;font-size:12px}
+.meterhead b{font-family:Montserrat,sans-serif;font-weight:600;color:var(--gold);font-variant-numeric:tabular-nums}
+.meterhead span{color:var(--muted);letter-spacing:.07em;text-transform:uppercase;font-size:11px}
+.track{height:3px;background:var(--line);border-radius:2px;overflow:hidden}
+.fill{height:100%;width:0;background:var(--gold);transition:width .35s ease}
+
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{
+  font:500 12.5px Inter,sans-serif; background:transparent; color:var(--muted);
+  border:1px solid var(--line); border-radius:999px; padding:6px 13px; cursor:pointer;
+}
+.chip:hover{color:var(--text)}
+.chip[aria-pressed="true"]{background:var(--gold);color:var(--ground);border-color:var(--gold);font-weight:600}
+
+.cards{display:flex;flex-direction:column;gap:14px}
+
+.card{
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:14px;
+}
+.card.done{opacity:.5}
+.card.done .beats,.card.done .land{opacity:.75}
+
+.chead{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.fmt{
+  font:600 10.5px Montserrat,sans-serif; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--gold); background:var(--gold-soft); border-radius:4px; padding:4px 8px;
+}
+.dur{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.num{margin-left:auto;font:600 11.5px Montserrat,sans-serif;color:var(--muted);font-variant-numeric:tabular-nums}
+
+.onscreen{border-left:2px solid var(--gold-line);padding-left:12px}
+.onscreen .lbl{
+  font:600 10px Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);display:block;margin-bottom:3px;
+}
+.onscreen p{margin:0;font-family:Montserrat,sans-serif;font-weight:600;font-size:16px;line-height:1.3;text-wrap:balance}
+
+.beats{display:grid;grid-template-columns:auto 1fr;gap:3px 13px;align-items:baseline}
+.t{
+  font:600 12px Montserrat,sans-serif;color:var(--gold);font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+.l{margin:0;font-size:14.5px;line-height:1.45}
+
+.land{background:var(--raise);border-radius:8px;padding:12px 14px}
+.land .lbl{
+  font:600 10px Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);display:block;margin-bottom:4px;
+}
+.land p{margin:0;font-family:Montserrat,sans-serif;font-weight:600;font-size:16.5px;line-height:1.3;text-wrap:balance}
+
+.motion{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
+.motion b{color:var(--text);font-weight:600}
+
+.foot{display:flex;gap:8px;padding-top:2px}
+.btn{
+  font:500 13px Inter,sans-serif;border-radius:8px;padding:9px 14px;cursor:pointer;
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+}
+.btn:hover{color:var(--text);border-color:var(--gold-line)}
+.btn.mark[aria-pressed="true"]{background:var(--gold-soft);color:var(--done);border-color:var(--gold-line);font-weight:600}
+.foot .copy{margin-left:auto}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.empty{color:var(--muted);text-align:center;padding:44px 0;font-size:14px}
+.note{margin-top:26px;font-size:12px;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);padding-top:14px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="topline">
+    <div>
+      <h1>Beat Clock</h1>
+      <p class="sub">38 scripts. Nothing sits longer than three seconds.</p>
+    </div>
+    <button id="themeBtn" type="button" aria-label="Switch theme">◐</button>
+  </div>
+  <div class="meter">
+    <div class="meterhead"><span>Filmed</span><b id="count">0 / 38</b></div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+  </div>
+  <div class="chips" id="chips"></div>
+</header>
+<div class="cards" id="cards"></div>
+<p class="note" id="note">Marking a script filmed saves it for you across your devices.</p>
+</div>
+
+<script>
+const DECK = "decks/beatclock-sep26";
+
+const S = [
+// ---- EDUCATION ----
+{g:"Education",f:"Accusation",os:"45 mins of cardio a day",b:[
+["0:00","Let me guess, forty five minutes of cardio a day,"],["0:02","and you're softer now than you were in January."],
+["0:04","You're softer because of the forty five minutes of cardio a day."],["0:07","Hear me out, your body's doing maths."],
+["0:09","You gave it less food and more work,"],["0:11","so it went looking for something to burn,"],
+["0:13","and muscle was the cheapest thing in the building."],["0:16","You're burning the furniture to heat the house."],
+["0:19","Warm for a bit, then you've got no chairs and you're still cold."],
+["0:23","Meanwhile Jimmy's on three lifts a week and a walk,"],["0:26","eating more than you, leaner than both of us."],
+["0:29","Jimmy's not gifted."],["0:31","Jimmy just stopped setting fire to his own furniture."]],
+land:"Walk more, and stop torching the chairs.",
+m:"New angle every beat through the first ten seconds, that's where you're bleeding. Drop right down on the furniture line. Jimmy gets a flat delivery, he's never the punchline."},
+
+{g:"Education",f:"Accusation",os:"8 weeks of weighing everything",b:[
+["0:00","Let me guess, eight weeks of weighing everything,"],["0:02","and you're more scared of food now than when you started."],
+["0:04","You're scared because you've weighed everything for eight weeks."],["0:07","Your brain doesn't know it's a diet."],
+["0:09","It knows a number goes off every time you eat,"],["0:12","so it's started treating dinner like a threat."],
+["0:15","It's a smoke alarm that screams when you make toast,"],["0:18","so eventually you just stop cooking."],
+["0:21","And now you can't eat at a mate's house"],["0:23","because there's no label on it."]],
+land:"You're allowed to eat something you didn't weigh.",
+m:"Kitchen, scales on the counter in shot the whole time, never mentioned. Push the scales away on the land. That gesture is the video."},
+
+{g:"Education",f:"Accusation",os:"in the gym 7 days a week",b:[
+["0:00","Let me guess, seven days a week in that gym,"],["0:02","and you look identical to March."],
+["0:04","You look identical because it's seven days a week."],["0:07","The training is the ask."],
+["0:09","The change happens after, asleep and eating."],["0:11","You've been putting the request in every single day"],
+["0:14","and never once letting it get filled."],["0:16","It's opening the oven every four minutes"],
+["0:18","and wondering why the thing never cooks."],["0:21","Jimmy's in four times a week,"],
+["0:23","home by seven, asleep by ten,"],["0:25","grown more this year than you have in three."]],
+land:"Take the day off. That's the session.",
+m:"Film leaving the gym, walking to the car, so the visual argues while you talk. Energy drops on the oven line and never comes back up."},
+
+{g:"Education",f:"Satire",os:"You NEED 10,000 steps a day (struck through) actually, not really",b:[
+["0:00","If you want to be healthy there's a number,"],["0:02","and the number is ten thousand."],
+["0:04","Not nine and a half."],["0:06","Ten."],
+["0:08","So if you're on nine thousand six hundred at half eleven at night"],["0:11","you get your shoes back on,"],
+["0:13","and you do laps of your kitchen island"],["0:15","like a man being punished,"],["0:17","until the watch buzzes."],
+["0:20","Because nine thousand six hundred is a wasted day."],["0:24","That's what the watch has got you thinking anyway."],
+["0:27","Ten thousand came from a pedometer advert in the sixties."]],
+land:"You're doing laps of your kitchen for an advert.",
+extra:"Comment door: Tell me the dumbest number your watch has made you chase.",
+m:"Film the kitchen laps for real, late, phone on the counter. Completely straight face for the first twenty four seconds, no wink anywhere."},
+
+{g:"Education",f:"Satire",os:"If you're not sore it didn't work (struck through) actually, not really",b:[
+["0:00","The only way to know a session worked"],["0:02","is if you can't sit down the next day."],
+["0:05","If you're getting down stairs like a normal person,"],["0:07","that was a warm up."],
+["0:09","You want to be gripping the bannister."],["0:11","You want your wife laughing at you getting off the sofa."],
+["0:14","And if you're not sore by Wednesday,"],["0:16","back in, do it again, until you are."],
+["0:19","That's what they've got you thinking anyway."],["0:22","I haven't been properly sore in about two years"],
+["0:25","and I've never lifted heavier."]],
+land:"Soreness just means it was new.",
+extra:"Comment door: Tell me the leg day that ruined your week, I'll go first.",
+m:"Sofa. Actually do the struggle getting up during the setup beats. Play it earnest right up until the turn."},
+
+{g:"Education",f:"Confession",os:"I ate like a bird for two years",b:[
+["0:00","I spent two years training six days a week"],["0:03","and eating about ninety grams of protein."],
+["0:06","Ninety."],["0:08","Six foot, lifting heavy, eating like a bird,"],
+["0:11","wondering why I looked the same every January."],["0:14","Muscle gets built out of something."],
+["0:16","You can't ask a builder for a house"],["0:18","and hand him a bag of sand."],
+["0:21","Doubled it, changed nothing else,"],["0:23","and the next six months beat the two years before it."]],
+land:"The training was never the problem. Go and eat.",
+m:"Kitchen, actually making food while you talk. Say 'ninety' on its own with a pause either side, that beat is the hook."},
+
+{g:"Education",f:"Confession",os:"five hours a night for three years",b:[
+["0:00","For about three years I slept five hours a night"],["0:03","and thought that was part of it."],
+["0:05","Up early, train, work late, again."],["0:08","Wore it like a badge."],
+["0:10","And I couldn't work out why I was getting strong in the gym"],["0:13","and going nowhere everywhere else."],
+["0:16","Sleep is when the work gets banked."],["0:18","I was making the deposit every single day"],
+["0:20","and never letting one of them clear."],["0:23","Fixed the sleep before I fixed anything else"],
+["0:26","and the rest got easier on its own."]],
+land:"Go to bed. That's the programme.",
+m:"Film late, low light, tired on purpose. Drop the energy from the banking line and never bring it back."},
+
+{g:"Education",f:"Confession",os:"I dieted for four years straight",b:[
+["0:00","I dieted, on and off, for four years straight."],["0:04","Never fat, never lean, permanently slightly hungry."],
+["0:08","And I thought maintenance was for people who'd given up,"],["0:11","so I never spent a single day there."],
+["0:14","Turns out a body doesn't change much while it's being squeezed."],["0:18","It changes after,"],
+["0:20","when it finally believes food's coming back."],["0:23","Six months at maintenance did more than four years of cutting."]],
+land:"You can't rush a body that doesn't trust you.",
+m:"Sat down, calm, no gym. Say this one slowly. Land goes almost quiet."},
+
+{g:"Education",f:"Confession",os:"new programme every 4 weeks",b:[
+["0:00","For years I changed my programme every four weeks."],["0:03","New split."],["0:05","New exercises."],
+["0:07","New spreadsheet I was weirdly proud of."],["0:10","Felt productive. Felt like I was on it."],
+["0:13","And I got very good at starting things."],["0:15","Nothing ever got heavy,"],["0:17","because nothing ever got old."],
+["0:20","The whole game is doing the same lifts and making them harder,"],["0:23","which is boring, and the boring is the point."]],
+land:"Run it til you're sick of it. Then run it again.",
+m:"Gym, between sets, phone propped on a bench. Slightly self mocking on the spreadsheet line."},
+
+{g:"Education",f:"Confession",os:"the least impressive thing that worked",b:[
+["0:00","The thing that changed my body the most"],["0:02","was not a programme."],["0:04","It was walking."],
+["0:06","Which is the least impressive sentence I have ever said out loud."],
+["0:10","For years I was doing brutal cardio three times a week"],["0:13","and sitting down for the other hundred hours."],
+["0:17","Now I just move all day."],["0:19","No sessions. No sweat. No recovery cost."]],
+land:"Nobody's making a documentary about it. It still worked.",
+m:"Film it walking, obviously. Handheld, outdoors, mid walk, slightly out of breath is fine and helps."},
+
+{g:"Education",f:"Confession",os:"I was scared of gaining a single kilo",b:[
+["0:00","I was scared of gaining one kilo for about five years."],["0:04","Which meant I never once ate enough to build anything."],
+["0:07","So I stayed the same weight,"],["0:09","the same shape,"],["0:11","for half a decade,"],["0:13","and I called it discipline."],
+["0:16","You cannot build something out of nothing."],["0:19","At some point you eat like you want to be bigger"],
+["0:21","and let the scale do whatever it's going to do."]],
+land:"Five years of holding still. Never again.",
+m:"Say the 'same weight, same shape, half a decade' beats flat and fast, one after another. They should feel like a stuck record."},
+
+{g:"Education",f:"Client story",os:"her calculator said 1700",b:[
+["0:00","Client came to me eating fourteen hundred calories a day."],
+["0:04","Her online calculator had told her maintenance was seventeen hundred,"],
+["0:08","so she'd spent two years living just under that,"],["0:11","permanently hungry, permanently stuck."],
+["0:14","Took us about four months to feed her back up."],["0:17","Her actual maintenance was over three thousand."],
+["0:20","Three thousand."],["0:22","She'd been walking around on half of what her body could handle,"],
+["0:25","calling herself lazy for not losing weight."]],
+land:"A website made that number up. She built two years around it.",
+m:"Say 'three thousand' on its own and let it sit. Everything after it goes quieter, not louder."},
+
+{g:"Education",f:"Explainer",os:"why the weight stopped",b:[
+["0:00","Everyone thinks a plateau means they've gone soft,"],["0:03","so they cut more."],["0:05","Here's what's actually happened."],
+["0:07","You've been in a deficit long enough that the body adapted."],["0:11","Moves less. Burns less. Runs the whole operation on less."],
+["0:15","So the number you were losing weight on"],["0:17","has quietly turned into the number you maintain on."],
+["0:21","Your deficit became your maintenance"],["0:23","and nobody sent you a letter about it."]],
+land:"Eat more for a fortnight. Then it'll move again.",
+m:"Flat and matter of fact throughout. The letter line is the only smile in it."},
+
+{g:"Education",f:"Explainer",os:"the scale went up and that's the good news",b:[
+["0:00","When I put someone up to their real maintenance"],["0:03","the scale goes up a kilo or two."],["0:06","Every single time."],
+["0:08","And every single time, they panic."],["0:11","That weight is glycogen."],
+["0:13","It's your muscles filling back up with fuel and water"],["0:16","after years of running on empty."],
+["0:19","Arrives in about three days, then it sits still."],["0:22","And if it never happens, you still haven't eaten enough."]],
+land:"That kilo is the whole point.",
+m:"Film next to a scale but don't stand on it. Calm, almost reassuring. This one's for the person who's frightened."},
+
+{g:"Education",f:"Explainer",os:"chest day. once a week.",b:[
+["0:00","If you're training a muscle once a week,"],["0:03","here's what happens in between."],
+["0:05","Muscle protein synthesis runs for about forty eight hours"],["0:08","after you train it."],["0:10","Then it stops."],
+["0:12","And the muscle starts going the other way."],["0:15","So on a once a week split"],["0:17","you get two days of building"],
+["0:19","and five days of slowly giving it back."]],
+land:"You're shrinking it more days than you're growing it. Hit it twice.",
+m:"Gym, whiteboard or your hand counting days out. The five days line is the one that lands, so slow down there."},
+
+{g:"Education",f:"Confession",os:"more isn't better",b:[
+["0:00","I used to think a session didn't count unless it destroyed me."],["0:04","Two hours. Everything to failure. Barely walking out."],
+["0:08","Here's the bit I didn't know."],["0:10","Your body's first job is getting back to where it started."],
+["0:14","Only what's left after that goes on building anything new."],["0:18","So I was spending every resource I had"],
+["0:20","repairing damage I'd caused on purpose,"],["0:23","and wondering why nothing ever grew."]],
+land:"More isn't better. Better is better.",
+m:"Gym car park after a session, not during. Slightly rueful, you're taking the piss out of your younger self."},
+
+{g:"Education",f:"Explainer",os:"your metabolism is not broken",b:[
+["0:00","If you're in your forties and everything that used to work"],["0:03","has stopped working,"],["0:05","hear me on one thing."],
+["0:07","Your metabolism is not broken."],["0:10","Energy balance doesn't stop being physics"],
+["0:12","because your hormones are all over the place."],["0:15","What changed is the environment."],
+["0:17","Estrogen's dropping, so you're less insulin sensitive,"],["0:20","recovery's slower,"],
+["0:22","and the scale's holding water that's hiding fat"],["0:24","you have genuinely already lost."],
+["0:27","It's harder now. It was never impossible."]],
+land:"It was never a lack of effort. It's physiology.",
+m:"Straight to camera, sat down, no gym in shot. The most important one in the deck and it should look like the least produced."},
+
+// ---- LIFE ----
+{g:"Life",f:"Sequence",os:"training with a 7 month old",b:[
+["0:00","This is what training looks like with a seven month old."],["0:02","Up at five, because she's up at five."],
+["0:04","Coffee, one handed."],["0:06","Pram out the door by half six."],
+["0:08","Forty minutes round the park while she sleeps."],["0:10","Home, breakfast, handover."],["0:12","Gym at eight."],
+["0:14","In and out in fifty minutes."],["0:16","Four lifts, phone in the bag."]],
+land:"And I haven't been motivated once this year.",
+m:"Every beat is a real shot, so shoot this across one actual morning and cut it later. No talking head anywhere. Land over the last frame, flat."},
+
+{g:"Life",f:"Sequence",os:"a saturday",b:[
+["0:00","Saturday with a baby and a business."],["0:02","Awake ten past five."],["0:04","Two coffees before six."],
+["0:06","Emails done before she's properly up."],["0:08","Park by eight, swings, the lot."],
+["0:10","She naps at eleven, I train in the garage."],["0:13","Lunch, the three of us."],["0:15","Laptop shut for the rest of it."]],
+land:"And I never once had to ask anyone if I could.",
+m:"Real footage across a real Saturday. Keep the beats boring on purpose, no adjectives, the pictures do it. Land is quiet."},
+
+{g:"Life",f:"Observation",os:"every hotel gym on earth",b:[
+["0:00","Every hotel gym on earth is the same room."],["0:03","Two dumbbells,"],
+["0:05","and they go three kilos to forty with nothing in between."],["0:08","One treadmill with a sign on it."],
+["0:11","A machine nobody has ever identified."],["0:14","Full length mirror on one wall,"],
+["0:16","so you can watch yourself curl three kilos"],["0:18","in front of a water cooler with no cups."]],
+land:"Cracking facilities.",
+m:"Film in an actual hotel gym, wide shots, pan across each thing as you name it. Land over the sign on the treadmill. Flat, no smile."},
+
+{g:"Life",f:"Observation",os:"nobody has ever done the tray correctly",b:[
+["0:00","Nobody has ever put their stuff in an airport tray correctly."],["0:03","You get the tray, you're calm."],
+["0:05","Belt off, laptop out, fine."],["0:07","Then you remember the liquids."],
+["0:10","And there's a bloke behind you who packed for this exact moment,"],["0:13","he's through, shoes on, gone."],
+["0:16","And you're stood there holding a belt and a bag of shampoo"],["0:19","like you've been arrested."]],
+land:"Twenty eight years old. Still can't do a tray.",
+m:"Airport, handheld, film it in the actual queue if you can get away with it. Speed up through the middle, land it dead slow."},
+
+{g:"Life",f:"Observation",os:"nobody folds a pram first go",b:[
+["0:00","Nobody has ever folded a pram on the first go."],["0:03","There's a button."],["0:05","There's a lever."],
+["0:07","And they have to be done together,"],["0:09","in an order that nobody tells you."],
+["0:12","So you're crouched in a car park doing keyhole surgery"],["0:15","while your wife holds the baby"],
+["0:17","and a bloke in the next bay watches the entire thing."]],
+land:"It folded fine in the shop.",
+m:"Car park, phone on the roof of the car, you genuinely wrestling it. Do not cut the failure. Land over you still crouched."},
+
+{g:"Life",f:"Lifestyle",os:"2022, one way",b:[
+["0:00","In 2022 I booked a one way ticket to England."],["0:03","No job."],["0:05","No flat."],
+["0:07","A mate's sofa for two weeks and then whatever came next."],["0:11","Everyone had a question,"],
+["0:13","and it was always the same question,"],["0:15","which was what if it doesn't work."],
+["0:18","Not one person asked what if it does."]],
+land:"Four years later there's a wife and a daughter in that answer.",
+m:"Airport or a window seat if you've got the footage. Land goes over something real, her or the flat, not your face."},
+
+{g:"Life",f:"Lifestyle",os:"how the work actually fits",b:[
+["0:00","When we travel I work two in the morning until eight."],["0:04","Alarm, laptop, dark room, coffee."],
+["0:07","Six hours. No messages, no meetings, nobody awake."],["0:11","Then it shuts, and it stays shut."],
+["0:13","Whole day is ours after that."],["0:15","People hear it and think it sounds brutal."],
+["0:18","It's six hours of work for a full day somewhere I chose."]],
+land:"I'd take that trade every week of my life.",
+m:"Film the actual 2am, dark room, laptop glow. Then cut hard to daylight for the land."},
+
+{g:"Life",f:"Lifestyle",os:"everything stopped",b:[
+["0:00","Delilah's asleep on my chest"],["0:02","and I genuinely cannot move."],["0:04","Laptop's over there."],
+["0:06","Phone's face down."],["0:08","There's about forty things I said I'd do today"],["0:11","and I'm doing none of them."],
+["0:14","Two years ago this would have absolutely wrecked me."]],
+land:"Now it's the best hour of my week.",
+m:"Whisper it. One shot, no cuts, filmed exactly as described. Do not tidy the room. This one doesn't need editing."},
+
+{g:"Life",f:"Lifestyle",os:"nearly 20 countries",b:[
+["0:00","I've been to nearly twenty countries."],["0:03","And the ones I actually remember"],["0:05","aren't the ones with the good photos."],
+["0:08","It's a coffee in Vietnam that nearly took my head off."],["0:12","A night in the desert with no signal."],
+["0:15","A cheap flight I almost didn't book,"],["0:17","and a wedding at the end of it."],
+["0:20","None of it was planned properly."],["0:22","All of it happened because someone said yes on a Tuesday."]],
+land:"Say yes on a Tuesday.",
+m:"Straight archive cuts, one per beat, no talking head at all. Land over the last frame."},
+
+{g:"Life",f:"Lifestyle",os:"my gym is a garage",b:[
+["0:00","My gym is a garage."],["0:02","Rack, bar, some plates, a bench that wobbles."],["0:06","No music I didn't choose."],
+["0:08","Nobody filming."],["0:10","Nobody waiting on the thing I'm using."],["0:13","I train while she naps. Forty minutes. Done."],
+["0:16","For years I thought I needed the full setup to take it seriously."]],
+land:"Turns out I needed a bar and a door that shuts.",
+m:"In the garage, mid session, sweating. Kick the wobbly bench as you mention it."},
+
+{g:"Life",f:"Lifestyle",os:"what it actually cost",b:[
+["0:00","People see the life and they see the good half."],["0:03","Here's the bill."],["0:05","Missed most of my mates' thirtieths."],
+["0:08","Birthdays I'm not getting back."],["0:10","Family on a screen instead of in the room."],
+["0:13","Two years of having basically no money."],["0:16","I'm not going to pretend that didn't hurt, because it did."]],
+land:"I paid it. I'd pay it again tomorrow.",
+m:"Straight to camera, no props, no location flex. This one has to look cheap or it doesn't work."},
+
+{g:"Life",f:"Life",os:"she has never listened to me once",b:[
+["0:00","Delilah is seven months old"],["0:02","and she has never once listened to a word I've said."],["0:06","She watches, though."],
+["0:08","Watches everything."],["0:10","And the thing that gets me"],["0:12","is she won't remember a single day of this."],
+["0:15","Not one."],["0:17","But she'll be built out of it."],["0:19","What we did on a normal Tuesday."],
+["0:21","Whether I kept the promises I made to myself."]],
+land:"She'll never remember it. She'll be made of it.",
+m:"With her, one shot, no cuts. Quiet. Don't perform this one at all."},
+
+{g:"Life",f:"Life",os:"what I actually do all day",b:[
+["0:00","People think this job is writing training programmes."],["0:04","That's about four percent of it."],
+["0:06","The rest is talking someone out of quitting on a Wednesday."],["0:10","Telling a woman in her forties her body isn't broken."],
+["0:14","Getting someone to eat more when everything they've ever read"],["0:17","told them to eat less."],
+["0:20","And sitting with someone the week it all falls apart."],["0:23","The programme is the easy bit."],
+["0:25","Anyone can write a programme."]],
+land:"You're not paying me for the spreadsheet.",
+m:"At the desk, laptop open, mid work day. No gym, no gear. The point is that none of it looks like fitness."},
+
+// ---- MOTIVATION ----
+{g:"Motivation",f:"Motivation",os:"you already know",b:[
+["0:00","You already know what you'd do."],["0:02","You've known for about two years."],["0:05","You know the job you'd leave."],
+["0:07","You know where you'd go."],["0:09","The clarity was never the missing bit."],["0:12","You just don't fancy the price."],
+["0:15","Which is fine, and it's honest, and I was there for ages."]],
+land:"But stop calling it confusion.",
+m:"Slow, flat, no big energy anywhere. The land is said kindly, not as a telling off."},
+
+{g:"Motivation",f:"Motivation",os:"yeah, I'm delusional",b:[
+["0:00","Someone told me I was delusional last year."],["0:03","About the business. About where I think it's going."],
+["0:07","I sat with it for a bit"],["0:09","and worked out they were completely right."],["0:12","I am."],
+["0:14","I've got no evidence for most of what I think is coming."],["0:17","But everything I've got now"],
+["0:19","started as something I had no evidence for."]],
+land:"Delusional's just early, baby.",
+m:"Shrug on 'I am.' That beat needs a full stop and a look. Land with a grin."},
+
+{g:"Motivation",f:"Motivation",os:"it's never the hard days",b:[
+["0:00","It's never the hard days that get you."],["0:03","Hard days are obvious. You see them coming, you brace."],
+["0:07","It's the medium ones."],["0:09","Nothing's wrong."],["0:11","You're not ill, you're not even tired."],
+["0:14","You just don't want to."],["0:16","And there's no story in skipping a medium day,"],
+["0:19","so you skip it and it doesn't even register as a decision."]],
+land:"Nobody quits on a Monday. They fade out on a Wednesday.",
+m:"Film on an actual medium day, in the car outside the gym, before you go in. The context does half the work."},
+
+{g:"Motivation",f:"Motivation",os:"nobody's coming",b:[
+["0:00","There's no version of this"],["0:02","where somebody turns up and sorts it out for you."],
+["0:06","No email. No moment where it all clicks."],["0:10","I waited about four years for that,"],["0:13","and it never came,"],
+["0:15","and the day I stopped waiting was the day it started."]],
+land:"It was always going to be you.",
+m:"Bare. No location, no props, no music. Let it be slightly uncomfortable."},
+
+{g:"Motivation",f:"Motivation",os:"nobody's going to remember either of us",b:[
+["0:00","In a hundred years nobody will know either of us existed."],["0:04","Not being grim. That's just true."],
+["0:07","Nobody's reviewing how you did."],["0:10","Nobody's checking whether you played it safe."],
+["0:13","The whole thing gets forgotten. All of it. Guaranteed."],["0:17","Which is the most freeing sentence I know."]],
+land:"None of it matters, so go and do the mad thing.",
+m:"Somewhere big and outdoors if you can. Land is said cheerfully, that contrast is the whole point."},
+
+{g:"Motivation",f:"Motivation",os:"everything's got a price on it",b:[
+["0:00","Everything you want has a price"],["0:02","and nobody puts it on the label."],["0:05","The body costs your evenings."],
+["0:08","The move costs having your family in the same country."],["0:12","That's not a warning, I'd do both again."],
+["0:15","But go in knowing what you're handing over,"],["0:18","because the people who quit"],["0:20","are the ones who thought it was free."]],
+land:"Check the price. Then pay it.",
+m:"Straight to camera, calm, almost administrative. No motivational lift in the voice at any point."},
+
+// ---- SNOWBOARD ----
+{g:"Snowboard",f:"Snowboard",os:"the only way to turn",b:[
+["0:00","The thing nobody tells you about learning to snowboard"],["0:03","is that to turn you have to lean down the mountain."],
+["0:07","Down it."],["0:09","Towards the drop."],["0:11","And every instinct you have says lean back into the hill"],
+["0:14","where it feels safe,"],["0:16","and leaning back is the exact thing that puts you on your arse."],
+["0:20","Took me two days to make myself do it."],["0:23","Second I did, I could ride."]],
+land:"Lean at the thing you're scared of. It's the only bit that works.",
+m:"Snowboard footage over the top, no talking head. If you've got a clip of yourself falling, open on that."},
+
+{g:"Snowboard",f:"Snowboard",os:"day one on a board",b:[
+["0:00","Day one on a snowboard you are appalling."],["0:03","Publicly."],["0:05","On a hill."],
+["0:07","In front of six year olds who are significantly better than you."],["0:11","You fall, you get up, you fall again,"],
+["0:14","and not one person watching cares even slightly."],["0:17","And somewhere in the middle of that"],
+["0:19","you work out that being rubbish at something in front of people"],["0:22","costs you absolutely nothing."]],
+land:"Go and be shit at something this year. It's free.",
+m:"Archive footage, the worse the better. Do not use a good clip of yourself anywhere in this."}
+];
+
+const GROUPS = ["All","Education","Life","Motivation","Snowboard"];
+let active = "All";
+let filmed = {};
+let ref = null;
+
+const key = i => "s" + i;
+const dur = s => { const last = s.b[s.b.length-1][0].split(":"); return (+last[0]*60 + +last[1] + 4) + "s"; };
+
+function plain(s){
+  let t = "ON SCREEN: " + s.os + "\n\n";
+  t += s.b.map(x => x[0] + "  " + x[1]).join("\n");
+  t += "\n\nLAND: " + s.land;
+  if (s.extra) t += "\n" + s.extra;
+  t += "\n\nDELIVERY: " + s.m;
+  return t;
+}
+
+function drawChips(){
+  const el = document.getElementById("chips");
+  el.textContent = "";
+  GROUPS.forEach(g => {
+    const n = g === "All" ? S.length : S.filter(s => s.g === g).length;
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip";
+    b.setAttribute("aria-pressed", String(g === active));
+    b.textContent = g + " " + n;
+    b.onclick = () => { active = g; drawChips(); draw(); };
+    el.appendChild(b);
+  });
+}
+
+function draw(){
+  const box = document.getElementById("cards");
+  box.textContent = "";
+  const list = S.map((s,i) => [s,i]).filter(([s]) => active === "All" || s.g === active);
+  if (!list.length){
+    const p = document.createElement("p");
+    p.className = "empty"; p.textContent = "Nothing here yet.";
+    box.appendChild(p); return;
+  }
+  list.forEach(([s,i]) => box.appendChild(card(s,i)));
+  meter();
+}
+
+function card(s,i){
+  const done = !!filmed[key(i)];
+  const c = document.createElement("article");
+  c.className = "card" + (done ? " done" : "");
+
+  const head = document.createElement("div");
+  head.className = "chead";
+  const f = document.createElement("span"); f.className = "fmt"; f.textContent = s.f;
+  const d = document.createElement("span"); d.className = "dur"; d.textContent = dur(s);
+  const n = document.createElement("span"); n.className = "num"; n.textContent = String(i+1).padStart(2,"0");
+  head.append(f,d,n); c.appendChild(head);
+
+  const os = document.createElement("div");
+  os.className = "onscreen";
+  const ol = document.createElement("span"); ol.className = "lbl"; ol.textContent = "On screen";
+  const op = document.createElement("p"); op.textContent = s.os;
+  os.append(ol,op); c.appendChild(os);
+
+  const beats = document.createElement("div");
+  beats.className = "beats";
+  s.b.forEach(([t,l]) => {
+    const ts = document.createElement("span"); ts.className = "t"; ts.textContent = t;
+    const ls = document.createElement("p"); ls.className = "l"; ls.textContent = l;
+    beats.append(ts,ls);
+  });
+  c.appendChild(beats);
+
+  const land = document.createElement("div");
+  land.className = "land";
+  const ll = document.createElement("span"); ll.className = "lbl"; ll.textContent = "Land";
+  const lp = document.createElement("p"); lp.textContent = s.land;
+  land.append(ll,lp);
+  if (s.extra){
+    const e = document.createElement("p");
+    e.className = "motion"; e.style.marginTop = "9px"; e.textContent = s.extra;
+    land.appendChild(e);
+  }
+  c.appendChild(land);
+
+  const m = document.createElement("p");
+  m.className = "motion";
+  const mb = document.createElement("b"); mb.textContent = "Delivery. ";
+  m.append(mb, document.createTextNode(s.m));
+  c.appendChild(m);
+
+  const foot = document.createElement("div");
+  foot.className = "foot";
+  const mark = document.createElement("button");
+  mark.type = "button"; mark.className = "btn mark";
+  mark.setAttribute("aria-pressed", String(done));
+  mark.textContent = done ? "Filmed" : "Mark filmed";
+  mark.onclick = () => toggle(i);
+  const copy = document.createElement("button");
+  copy.type = "button"; copy.className = "btn copy"; copy.textContent = "Copy";
+  copy.onclick = async () => {
+    try { await navigator.clipboard.writeText(plain(s)); copy.textContent = "Copied"; }
+    catch { copy.textContent = "Copy failed"; }
+    setTimeout(() => { copy.textContent = "Copy"; }, 1400);
+  };
+  foot.append(mark, copy); c.appendChild(foot);
+  return c;
+}
+
+function meter(){
+  const n = S.filter((_,i) => filmed[key(i)]).length;
+  document.getElementById("count").textContent = n + " / " + S.length;
+  document.getElementById("fill").style.width = (n / S.length * 100) + "%";
+}
+
+function toggle(i){
+  const k = key(i);
+  if (filmed[k]) delete filmed[k]; else filmed[k] = true;
+  draw();
+  if (ref) ref.set({ filmed: filmed }).catch(() => {
+    document.getElementById("note").textContent = "That didn't save. Your marks are showing but they won't survive a reload.";
+  });
+}
+
+const themeBtn = document.getElementById("themeBtn");
+themeBtn.onclick = () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const dark = cur ? cur === "dark" : !window.matchMedia("(prefers-color-scheme: light)").matches;
+  document.documentElement.setAttribute("data-theme", dark ? "light" : "dark");
+};
+
+drawChips();
+draw();
+
+(async () => {
+  const db = window.claude && window.claude.use ? await window.claude.use("db") : null;
+  if (!db){
+    document.getElementById("note").textContent = "Filmed marks won't save in this view, so they'll clear when you reload.";
+    return;
+  }
+  ref = db.doc(DECK);
+  ref.onSnapshot(
+    snap => {
+      const data = snap.exists ? snap.data() : null;
+      filmed = (data && data.filmed && typeof data.filmed === "object") ? Object.assign({}, data.filmed) : {};
+      draw();
+    },
+    () => { document.getElementById("note").textContent = "Lost the connection to your saved marks. Reload to try again."; }
+  );
+})();
+</script>

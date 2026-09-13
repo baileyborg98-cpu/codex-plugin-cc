@@ -259,3 +259,37 @@ Close on a flat verdict of two or three words
 Never explain it
 ```
 Use for any small universal irritation you can film yourself inside. Hotel light switches, airport queues, gym equipment, hotel gyms, packing, jet lag, prams, anything everyone has met and nobody has named.
+
+---
+
+# THE FAILURE: the cardio reel
+
+**45 seconds. 100% non followers. Skip rate 54.7%, flagged Higher. Every engagement metric below baseline. Roughly 7% still there at the end.**
+
+Worst performer in the set and worth more than the wins, because three separate things went wrong and they are all fixable.
+
+## The curve
+
+100% at 0:00, about 28% by 0:03, then a slow bleed to roughly 7%.
+
+Every previous reel lost its audience over four or five seconds. This one lost 72% in three. That is not a retention problem, it is a first frame problem, and Instagram now confirms it by listing skip rate at the top as the metric that most affects reach.
+
+## What went wrong
+
+**1. The on screen text had no tension.** The reel went out with "The weekly structure you need for fat loss", which reads like a chapter heading. Compare the winners: "The diet is the reason you don't have abs", "You have to ONLY eat chicken and rice to lose weight" struck through, "Nobody has ever found the right hotel light switch first go". Every one of those is a claim you either agree or disagree with in half a second. A structure promise is homework, and nobody skips toward homework.
+
+**2. The hook accused too small a group.** "Let me guess, forty five minutes of cardio a day." Almost nobody does forty five minutes of cardio a day. The abs reel accused everyone who has ever dieted, which is most of the audience. Narrow the accusation and you narrow the number of people for whom the first line is about them.
+
+**3. The fix was buried where nobody was.** The prescription ran from 0:18 to 0:33. About 10% of viewers were still watching by then, which is exactly why the save rate came back at 0.0% despite the script containing specific, saveable instructions. A fix nobody reaches is not a fix.
+
+## The rules this produces
+
+- **On screen text is a claim, not a topic.** Use the proven shape: "[what you're doing] is the reason [the thing you hate]". It has to be arguable in half a second.
+- **Accuse the widest true group.** If the opening line only describes a niche, the rest of the script never gets read.
+- **Fix starts by second twelve, at the latest.** Anything after twenty seconds is talking to a tenth of the room.
+- **Education scripts cap at about twenty five seconds.** The forty five second version spends its back half on an audience that already left.
+- **Watch skip rate first now.** Instagram ranks it above everything else for reach, and it is decided entirely by the thumbnail and the first frame.
+
+## What it does not mean
+
+Length is not the problem in general. The 57 second abs reel held 20% and did well. Long works when the first three seconds earn it. This one never earned them.

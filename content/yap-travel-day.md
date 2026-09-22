@@ -108,3 +108,48 @@ That's fourteen shots. Thirteen of them are the 32 hours reel and the last two a
 ## One note
 
 Don't film the big one's voiceover until you land. The script above is what you say, but you want to sound like someone at the end of thirty two hours, not someone at the start of it. The line about home is not a line you can perform fresh.
+
+---
+
+## THE COFFEE ONE
+
+**Format:** Observation. Coffee gets comments for free because everybody has an opinion, so no comment door needed.
+
+**On screen:** last UK coffee before Australia
+
+```
+0:00  Right, this is my last coffee before Australia
+0:03  and I need to say something in its defence.
+0:06  This is a good coffee.
+0:08  Genuinely. It's fine. It's done nothing wrong.
+0:11  But I've been away four years now
+0:13  and I have become the exact Australian
+0:16  I used to take the absolute piss out of.
+0:19  The one who brings up the coffee. Unprompted. Within ten minutes of meeting you.
+0:24  I can hear myself doing it. I cannot stop.
+```
+
+**Land:** Twenty two hours. Then I promise I'll shut up about it.
+
+**Delivery:** Hold the cup the whole time like you're giving evidence. Look at it, not the camera, for the first three beats. Total sincerity on "it's done nothing wrong". The last two beats speed up like you're confessing.
+
+---
+
+### 15 second version, for stories
+
+```
+0:00  Last coffee before Australia.
+0:02  Nothing wrong with this one. It's fine.
+0:05  But I've been away four years
+0:07  and I've turned into the Australian
+0:09  who brings up the coffee within ten minutes of meeting you.
+0:13  Unprompted. Every time.
+```
+
+**Land:** Twenty two hours and I'll be unbearable.
+
+---
+
+### The choice I made here
+
+Your rule is no place versus place, and the obvious version of this joke is exactly that. So the joke points at you instead. You've become insufferable, the coffee is innocent, and nobody watching has to defend their country. It's funnier that way anyway, and it means the comments fill up with Australians agreeing rather than Brits arguing.
